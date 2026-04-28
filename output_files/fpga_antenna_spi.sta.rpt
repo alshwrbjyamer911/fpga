@@ -1,0 +1,1472 @@
+Timing Analyzer report for fpga_antenna_spi
+Wed Apr 29 01:38:48 2026
+Quartus Prime Version 25.1std.0 Build 1129 10/21/2025 SC Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Timing Analyzer Summary
+  3. Parallel Compilation
+  4. SDC File List
+  5. Clocks
+  6. Slow 1200mV 85C Model Fmax Summary
+  7. Timing Closure Recommendations
+  8. Slow 1200mV 85C Model Setup Summary
+  9. Slow 1200mV 85C Model Hold Summary
+ 10. Slow 1200mV 85C Model Recovery Summary
+ 11. Slow 1200mV 85C Model Removal Summary
+ 12. Slow 1200mV 85C Model Minimum Pulse Width Summary
+ 13. Slow 1200mV 85C Model Setup: 'CLOCK_50'
+ 14. Slow 1200mV 85C Model Hold: 'CLOCK_50'
+ 15. Slow 1200mV 85C Model Recovery: 'CLOCK_50'
+ 16. Slow 1200mV 85C Model Removal: 'CLOCK_50'
+ 17. Slow 1200mV 85C Model Metastability Summary
+ 18. Slow 1200mV 0C Model Fmax Summary
+ 19. Slow 1200mV 0C Model Setup Summary
+ 20. Slow 1200mV 0C Model Hold Summary
+ 21. Slow 1200mV 0C Model Recovery Summary
+ 22. Slow 1200mV 0C Model Removal Summary
+ 23. Slow 1200mV 0C Model Minimum Pulse Width Summary
+ 24. Slow 1200mV 0C Model Setup: 'CLOCK_50'
+ 25. Slow 1200mV 0C Model Hold: 'CLOCK_50'
+ 26. Slow 1200mV 0C Model Recovery: 'CLOCK_50'
+ 27. Slow 1200mV 0C Model Removal: 'CLOCK_50'
+ 28. Slow 1200mV 0C Model Metastability Summary
+ 29. Fast 1200mV 0C Model Setup Summary
+ 30. Fast 1200mV 0C Model Hold Summary
+ 31. Fast 1200mV 0C Model Recovery Summary
+ 32. Fast 1200mV 0C Model Removal Summary
+ 33. Fast 1200mV 0C Model Minimum Pulse Width Summary
+ 34. Fast 1200mV 0C Model Setup: 'CLOCK_50'
+ 35. Fast 1200mV 0C Model Hold: 'CLOCK_50'
+ 36. Fast 1200mV 0C Model Recovery: 'CLOCK_50'
+ 37. Fast 1200mV 0C Model Removal: 'CLOCK_50'
+ 38. Fast 1200mV 0C Model Metastability Summary
+ 39. Multicorner Timing Analysis Summary
+ 40. Board Trace Model Assignments
+ 41. Input Transition Times
+ 42. Signal Integrity Metrics (Slow 1200mv 0c Model)
+ 43. Signal Integrity Metrics (Slow 1200mv 85c Model)
+ 44. Signal Integrity Metrics (Fast 1200mv 0c Model)
+ 45. Setup Transfers
+ 46. Hold Transfers
+ 47. Recovery Transfers
+ 48. Removal Transfers
+ 49. Report TCCS
+ 50. Report RSKM
+ 51. Unconstrained Paths Summary
+ 52. Clock Status Summary
+ 53. Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2025  Altera Corporation. All rights reserved.
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, the Altera Quartus Prime License Agreement,
+the Altera IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Altera and sold by Altera or its authorized distributors.  Please
+refer to the Altera Software License Subscription Agreements 
+on the Quartus Prime software download page.
+
+
+
++---------------------------------------------------------------------------------+
+; Timing Analyzer Summary                                                         ;
++-----------------------+---------------------------------------------------------+
+; Quartus Prime Version ; Version 25.1std.0 Build 1129 10/21/2025 SC Lite Edition ;
+; Timing Analyzer       ; Legacy Timing Analyzer                                  ;
+; Revision Name         ; fpga_antenna_spi                                        ;
+; Device Family         ; Cyclone IV E                                            ;
+; Device Name           ; EP4CE22F17C6                                            ;
+; Timing Models         ; Final                                                   ;
+; Delay Model           ; Combined                                                ;
+; Rise/Fall Delays      ; Enabled                                                 ;
++-----------------------+---------------------------------------------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 16          ;
+; Maximum allowed            ; 8           ;
+;                            ;             ;
+; Average used               ; 1.03        ;
+; Maximum used               ; 8           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processor 2            ;   0.7%      ;
+;     Processors 3-8         ;   0.3%      ;
++----------------------------+-------------+
+
+
++----------------------------------------------------------+
+; SDC File List                                            ;
++----------------------+--------+--------------------------+
+; SDC File Path        ; Status ; Read at                  ;
++----------------------+--------+--------------------------+
+; fpga_antenna_spi.sdc ; OK     ; Wed Apr 29 01:38:46 2026 ;
++----------------------+--------+--------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clocks                                                                                                                                                                               ;
++------------+------+--------+-----------+-------+--------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+--------------+
+; Clock Name ; Type ; Period ; Frequency ; Rise  ; Fall   ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source ; Targets      ;
++------------+------+--------+-----------+-------+--------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+--------------+
+; CLOCK_50   ; Base ; 20.000 ; 50.0 MHz  ; 0.000 ; 10.000 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { CLOCK_50 } ;
++------------+------+--------+-----------+-------+--------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+--------------+
+
+
++--------------------------------------------------+
+; Slow 1200mV 85C Model Fmax Summary               ;
++------------+-----------------+------------+------+
+; Fmax       ; Restricted Fmax ; Clock Name ; Note ;
++------------+-----------------+------------+------+
+; 212.99 MHz ; 212.99 MHz      ; CLOCK_50   ;      ;
++------------+-----------------+------------+------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+
+
+----------------------------------
+; Timing Closure Recommendations ;
+----------------------------------
+HTML report is unavailable in plain text report export.
+
+
++-------------------------------------+
+; Slow 1200mV 85C Model Setup Summary ;
++----------+--------+-----------------+
+; Clock    ; Slack  ; End Point TNS   ;
++----------+--------+-----------------+
+; CLOCK_50 ; 15.305 ; 0.000           ;
++----------+--------+-----------------+
+
+
++------------------------------------+
+; Slow 1200mV 85C Model Hold Summary ;
++----------+-------+-----------------+
+; Clock    ; Slack ; End Point TNS   ;
++----------+-------+-----------------+
+; CLOCK_50 ; 0.358 ; 0.000           ;
++----------+-------+-----------------+
+
+
++----------------------------------------+
+; Slow 1200mV 85C Model Recovery Summary ;
++----------+--------+--------------------+
+; Clock    ; Slack  ; End Point TNS      ;
++----------+--------+--------------------+
+; CLOCK_50 ; 17.938 ; 0.000              ;
++----------+--------+--------------------+
+
+
++---------------------------------------+
+; Slow 1200mV 85C Model Removal Summary ;
++----------+-------+--------------------+
+; Clock    ; Slack ; End Point TNS      ;
++----------+-------+--------------------+
+; CLOCK_50 ; 0.918 ; 0.000              ;
++----------+-------+--------------------+
+
+
++---------------------------------------------------+
+; Slow 1200mV 85C Model Minimum Pulse Width Summary ;
++----------+-------+--------------------------------+
+; Clock    ; Slack ; End Point TNS                  ;
++----------+-------+--------------------------------+
+; CLOCK_50 ; 9.596 ; 0.000                          ;
++----------+-------+--------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 85C Model Setup: 'CLOCK_50'                                                                            ;
++--------+------------------+------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node        ; To Node          ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+------------------+------------------+--------------+-------------+--------------+------------+------------+
+; 15.305 ; cs_n_sync[2]     ; best_angle[1]    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.062     ; 4.628      ;
+; 15.305 ; cs_n_sync[2]     ; best_angle[0]    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.062     ; 4.628      ;
+; 15.305 ; cs_n_sync[2]     ; best_angle[2]    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.062     ; 4.628      ;
+; 15.305 ; cs_n_sync[2]     ; best_angle[3]    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.062     ; 4.628      ;
+; 15.437 ; state.ST_REPLY   ; best_angle[1]    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.062     ; 4.496      ;
+; 15.437 ; state.ST_REPLY   ; best_angle[0]    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.062     ; 4.496      ;
+; 15.437 ; state.ST_REPLY   ; best_angle[2]    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.062     ; 4.496      ;
+; 15.437 ; state.ST_REPLY   ; best_angle[3]    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.062     ; 4.496      ;
+; 15.467 ; sclk_sync[1]     ; best_angle[1]    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.057     ; 4.471      ;
+; 15.467 ; sclk_sync[1]     ; best_angle[0]    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.057     ; 4.471      ;
+; 15.467 ; sclk_sync[1]     ; best_angle[2]    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.057     ; 4.471      ;
+; 15.467 ; sclk_sync[1]     ; best_angle[3]    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.057     ; 4.471      ;
+; 15.531 ; state.ST_SCAN    ; best_angle[1]    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.062     ; 4.402      ;
+; 15.531 ; state.ST_SCAN    ; best_angle[0]    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.062     ; 4.402      ;
+; 15.531 ; state.ST_SCAN    ; best_angle[2]    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.062     ; 4.402      ;
+; 15.531 ; state.ST_SCAN    ; best_angle[3]    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.062     ; 4.402      ;
+; 15.666 ; state.ST_SCAN    ; bit_cnt[1]       ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.067     ; 4.262      ;
+; 15.667 ; state.ST_SCAN    ; bit_cnt[2]       ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.067     ; 4.261      ;
+; 15.691 ; rx_shift[3]      ; best_angle[1]    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.062     ; 4.242      ;
+; 15.691 ; rx_shift[3]      ; best_angle[0]    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.062     ; 4.242      ;
+; 15.691 ; rx_shift[3]      ; best_angle[2]    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.062     ; 4.242      ;
+; 15.691 ; rx_shift[3]      ; best_angle[3]    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.062     ; 4.242      ;
+; 15.803 ; bit_cnt[0]       ; best_angle[1]    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.057     ; 4.135      ;
+; 15.803 ; bit_cnt[0]       ; best_angle[0]    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.057     ; 4.135      ;
+; 15.803 ; bit_cnt[0]       ; best_angle[2]    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.057     ; 4.135      ;
+; 15.803 ; bit_cnt[0]       ; best_angle[3]    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.057     ; 4.135      ;
+; 15.945 ; state.ST_SCAN    ; bit_cnt[0]       ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.067     ; 3.983      ;
+; 15.954 ; bit_cnt[2]       ; best_angle[1]    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.057     ; 3.984      ;
+; 15.954 ; bit_cnt[2]       ; best_angle[0]    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.057     ; 3.984      ;
+; 15.954 ; bit_cnt[2]       ; best_angle[2]    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.057     ; 3.984      ;
+; 15.954 ; bit_cnt[2]       ; best_angle[3]    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.057     ; 3.984      ;
+; 16.042 ; bit_cnt[1]       ; best_angle[1]    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.057     ; 3.896      ;
+; 16.042 ; bit_cnt[1]       ; best_angle[0]    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.057     ; 3.896      ;
+; 16.042 ; bit_cnt[1]       ; best_angle[2]    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.057     ; 3.896      ;
+; 16.042 ; bit_cnt[1]       ; best_angle[3]    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.057     ; 3.896      ;
+; 16.135 ; bit_cnt[1]       ; bit_cnt[1]       ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.062     ; 3.798      ;
+; 16.136 ; bit_cnt[1]       ; bit_cnt[2]       ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.062     ; 3.797      ;
+; 16.140 ; bit_cnt[1]       ; miso_shift[7]    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.057     ; 3.798      ;
+; 16.140 ; bit_cnt[1]       ; miso_shift[6]    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.057     ; 3.798      ;
+; 16.140 ; bit_cnt[1]       ; miso_shift[5]    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.057     ; 3.798      ;
+; 16.140 ; bit_cnt[1]       ; miso_shift[4]    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.057     ; 3.798      ;
+; 16.145 ; bit_cnt[2]       ; bit_cnt[1]       ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.062     ; 3.788      ;
+; 16.146 ; bit_cnt[2]       ; bit_cnt[2]       ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.062     ; 3.787      ;
+; 16.150 ; bit_cnt[2]       ; miso_shift[7]    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.057     ; 3.788      ;
+; 16.150 ; bit_cnt[2]       ; miso_shift[6]    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.057     ; 3.788      ;
+; 16.150 ; bit_cnt[2]       ; miso_shift[5]    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.057     ; 3.788      ;
+; 16.150 ; bit_cnt[2]       ; miso_shift[4]    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.057     ; 3.788      ;
+; 16.170 ; cs_n_sync[2]     ; best_strength[0] ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.075     ; 3.750      ;
+; 16.170 ; cs_n_sync[2]     ; best_strength[1] ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.075     ; 3.750      ;
+; 16.170 ; cs_n_sync[2]     ; best_strength[2] ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.075     ; 3.750      ;
+; 16.170 ; cs_n_sync[2]     ; best_strength[3] ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.075     ; 3.750      ;
+; 16.202 ; best_strength[1] ; best_angle[1]    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.082     ; 3.711      ;
+; 16.202 ; best_strength[1] ; best_angle[0]    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.082     ; 3.711      ;
+; 16.202 ; best_strength[1] ; best_angle[2]    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.082     ; 3.711      ;
+; 16.202 ; best_strength[1] ; best_angle[3]    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.082     ; 3.711      ;
+; 16.208 ; best_strength[0] ; best_angle[1]    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.082     ; 3.705      ;
+; 16.208 ; best_strength[0] ; best_angle[0]    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.082     ; 3.705      ;
+; 16.208 ; best_strength[0] ; best_angle[2]    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.082     ; 3.705      ;
+; 16.208 ; best_strength[0] ; best_angle[3]    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.082     ; 3.705      ;
+; 16.302 ; state.ST_REPLY   ; best_strength[0] ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.075     ; 3.618      ;
+; 16.302 ; state.ST_REPLY   ; best_strength[1] ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.075     ; 3.618      ;
+; 16.302 ; state.ST_REPLY   ; best_strength[2] ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.075     ; 3.618      ;
+; 16.302 ; state.ST_REPLY   ; best_strength[3] ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.075     ; 3.618      ;
+; 16.309 ; sclk_sync[1]     ; bit_cnt[1]       ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.062     ; 3.624      ;
+; 16.312 ; sclk_sync[1]     ; bit_cnt[2]       ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.062     ; 3.621      ;
+; 16.332 ; sclk_sync[1]     ; best_strength[0] ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.070     ; 3.593      ;
+; 16.332 ; sclk_sync[1]     ; best_strength[1] ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.070     ; 3.593      ;
+; 16.332 ; sclk_sync[1]     ; best_strength[2] ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.070     ; 3.593      ;
+; 16.332 ; sclk_sync[1]     ; best_strength[3] ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.070     ; 3.593      ;
+; 16.336 ; cs_n_sync[2]     ; frame_cnt[1]     ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.070     ; 3.589      ;
+; 16.336 ; cs_n_sync[2]     ; frame_cnt[0]     ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.070     ; 3.589      ;
+; 16.336 ; cs_n_sync[2]     ; frame_cnt[3]     ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.070     ; 3.589      ;
+; 16.336 ; cs_n_sync[2]     ; frame_cnt[2]     ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.070     ; 3.589      ;
+; 16.359 ; sclk_sync[2]     ; bit_cnt[1]       ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.062     ; 3.574      ;
+; 16.362 ; sclk_sync[2]     ; bit_cnt[2]       ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.062     ; 3.571      ;
+; 16.377 ; bit_cnt[0]       ; bit_cnt[1]       ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.062     ; 3.556      ;
+; 16.378 ; bit_cnt[0]       ; bit_cnt[2]       ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.062     ; 3.555      ;
+; 16.382 ; bit_cnt[0]       ; miso_shift[7]    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.057     ; 3.556      ;
+; 16.382 ; bit_cnt[0]       ; miso_shift[6]    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.057     ; 3.556      ;
+; 16.382 ; bit_cnt[0]       ; miso_shift[5]    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.057     ; 3.556      ;
+; 16.382 ; bit_cnt[0]       ; miso_shift[4]    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.057     ; 3.556      ;
+; 16.399 ; state.ST_SCAN    ; best_strength[0] ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.075     ; 3.521      ;
+; 16.399 ; state.ST_SCAN    ; best_strength[1] ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.075     ; 3.521      ;
+; 16.399 ; state.ST_SCAN    ; best_strength[2] ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.075     ; 3.521      ;
+; 16.399 ; state.ST_SCAN    ; best_strength[3] ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.075     ; 3.521      ;
+; 16.414 ; bit_cnt[1]       ; bit_cnt[0]       ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.062     ; 3.519      ;
+; 16.424 ; bit_cnt[2]       ; bit_cnt[0]       ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.062     ; 3.509      ;
+; 16.437 ; rx_shift[4]      ; best_angle[1]    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.082     ; 3.476      ;
+; 16.437 ; rx_shift[4]      ; best_angle[0]    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.082     ; 3.476      ;
+; 16.437 ; rx_shift[4]      ; best_angle[2]    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.082     ; 3.476      ;
+; 16.437 ; rx_shift[4]      ; best_angle[3]    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.082     ; 3.476      ;
+; 16.470 ; sclk_sync[1]     ; miso_shift[7]    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.057     ; 3.468      ;
+; 16.470 ; sclk_sync[1]     ; miso_shift[6]    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.057     ; 3.468      ;
+; 16.470 ; sclk_sync[1]     ; miso_shift[5]    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.057     ; 3.468      ;
+; 16.470 ; sclk_sync[1]     ; miso_shift[4]    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.057     ; 3.468      ;
+; 16.510 ; sclk_sync[2]     ; best_angle[1]    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.057     ; 3.428      ;
+; 16.510 ; sclk_sync[2]     ; best_angle[0]    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.057     ; 3.428      ;
+; 16.510 ; sclk_sync[2]     ; best_angle[2]    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.057     ; 3.428      ;
+; 16.510 ; sclk_sync[2]     ; best_angle[3]    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.057     ; 3.428      ;
+; 16.556 ; rx_shift[3]      ; best_strength[0] ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.075     ; 3.364      ;
++--------+------------------+------------------+--------------+-------------+--------------+------------+------------+
+
+
++-----------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 85C Model Hold: 'CLOCK_50'                                                                          ;
++-------+----------------+------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node      ; To Node          ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+----------------+------------------+--------------+-------------+--------------+------------+------------+
+; 0.358 ; bit_cnt[0]     ; bit_cnt[0]       ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.062      ; 0.577      ;
+; 0.358 ; bit_cnt[1]     ; bit_cnt[1]       ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.062      ; 0.577      ;
+; 0.358 ; bit_cnt[2]     ; bit_cnt[2]       ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.062      ; 0.577      ;
+; 0.358 ; state.ST_REPLY ; state.ST_REPLY   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.062      ; 0.577      ;
+; 0.358 ; state.ST_READY ; state.ST_READY   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.062      ; 0.577      ;
+; 0.358 ; state.ST_SCAN  ; state.ST_SCAN    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.062      ; 0.577      ;
+; 0.358 ; frame_cnt[1]   ; frame_cnt[1]     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.062      ; 0.577      ;
+; 0.358 ; frame_cnt[3]   ; frame_cnt[3]     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.062      ; 0.577      ;
+; 0.358 ; frame_cnt[2]   ; frame_cnt[2]     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.062      ; 0.577      ;
+; 0.361 ; frame_cnt[0]   ; frame_cnt[0]     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.062      ; 0.580      ;
+; 0.374 ; miso_shift[5]  ; miso_shift[6]    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.062      ; 0.593      ;
+; 0.374 ; best_angle[1]  ; miso_shift[5]    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.062      ; 0.593      ;
+; 0.374 ; mosi_sync[0]   ; mosi_sync[1]     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.062      ; 0.593      ;
+; 0.374 ; cs_n_sync[0]   ; cs_n_sync[1]     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.062      ; 0.593      ;
+; 0.375 ; rst_n_sync[1]  ; rst_n_sync[2]    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.062      ; 0.594      ;
+; 0.376 ; rst_n_sync[0]  ; rst_n_sync[1]    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.062      ; 0.595      ;
+; 0.379 ; rx_shift[6]    ; best_strength[3] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.063      ; 0.599      ;
+; 0.379 ; frame_cnt[2]   ; frame_cnt[3]     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.062      ; 0.598      ;
+; 0.385 ; rx_shift[4]    ; best_strength[1] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.063      ; 0.605      ;
+; 0.386 ; rx_shift[4]    ; rx_shift[5]      ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.063      ; 0.606      ;
+; 0.386 ; frame_cnt[0]   ; frame_cnt[1]     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.062      ; 0.605      ;
+; 0.387 ; rx_shift[5]    ; best_strength[2] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.063      ; 0.607      ;
+; 0.387 ; rx_shift[5]    ; rx_shift[6]      ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.063      ; 0.607      ;
+; 0.400 ; bit_cnt[0]     ; bit_cnt[1]       ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.062      ; 0.619      ;
+; 0.441 ; cs_n_sync[2]   ; state.ST_READY   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.062      ; 0.660      ;
+; 0.530 ; rx_shift[2]    ; rx_shift[3]      ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.062      ; 0.749      ;
+; 0.543 ; state.ST_REPLY ; fpga_ready_reg   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.062      ; 0.762      ;
+; 0.551 ; state.ST_REPLY ; rx_shift[1]      ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.062      ; 0.770      ;
+; 0.552 ; state.ST_REPLY ; rx_shift[2]      ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.062      ; 0.771      ;
+; 0.552 ; state.ST_REPLY ; rx_shift[0]      ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.062      ; 0.771      ;
+; 0.553 ; best_angle[0]  ; miso_shift[4]    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.062      ; 0.772      ;
+; 0.554 ; best_angle[3]  ; miso_shift[7]    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.062      ; 0.773      ;
+; 0.565 ; best_angle[2]  ; miso_shift[6]    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.062      ; 0.784      ;
+; 0.568 ; miso_shift[4]  ; miso_shift[5]    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.062      ; 0.787      ;
+; 0.586 ; rx_shift[1]    ; rx_shift[2]      ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.062      ; 0.805      ;
+; 0.586 ; rx_shift[0]    ; rx_shift[1]      ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.062      ; 0.805      ;
+; 0.611 ; state.ST_READY ; state.ST_REPLY   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.062      ; 0.830      ;
+; 0.623 ; state.ST_READY ; fpga_ready_reg   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.062      ; 0.842      ;
+; 0.654 ; cs_n_sync[1]   ; cs_n_sync[2]     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.062      ; 0.873      ;
+; 0.657 ; state.ST_REPLY ; state.ST_READY   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.062      ; 0.876      ;
+; 0.665 ; cs_n_sync[2]   ; state.ST_REPLY   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.062      ; 0.884      ;
+; 0.665 ; cs_n_sync[2]   ; rx_shift[2]      ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.062      ; 0.884      ;
+; 0.665 ; cs_n_sync[2]   ; rx_shift[0]      ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.062      ; 0.884      ;
+; 0.667 ; cs_n_sync[2]   ; rx_shift[1]      ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.062      ; 0.886      ;
+; 0.682 ; cs_n_sync[2]   ; rx_shift[3]      ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.062      ; 0.901      ;
+; 0.686 ; sclk_sync[0]   ; sclk_sync[1]     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.062      ; 0.905      ;
+; 0.689 ; frame_cnt[1]   ; frame_cnt[2]     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.062      ; 0.908      ;
+; 0.712 ; mosi_sync[2]   ; rx_shift[0]      ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.062      ; 0.931      ;
+; 0.713 ; sclk_sync[1]   ; sclk_sync[2]     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.062      ; 0.932      ;
+; 0.743 ; miso_shift[6]  ; miso_shift[7]    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.062      ; 0.962      ;
+; 0.766 ; rx_shift[2]    ; best_angle[3]    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.062      ; 0.985      ;
+; 0.768 ; state.ST_REPLY ; rx_shift[3]      ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.062      ; 0.987      ;
+; 0.790 ; frame_cnt[3]   ; frame_cnt[2]     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.062      ; 1.009      ;
+; 0.826 ; bit_cnt[1]     ; bit_cnt[2]       ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.062      ; 1.045      ;
+; 0.871 ; rx_shift[1]    ; best_angle[2]    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.062      ; 1.090      ;
+; 0.873 ; frame_cnt[1]   ; frame_cnt[3]     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.062      ; 1.092      ;
+; 0.883 ; frame_cnt[0]   ; frame_cnt[2]     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.062      ; 1.102      ;
+; 0.901 ; cs_n_sync[2]   ; miso_shift[6]    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.062      ; 1.120      ;
+; 0.914 ; cs_n_sync[2]   ; fpga_ready_reg   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.062      ; 1.133      ;
+; 0.922 ; mosi_sync[1]   ; mosi_sync[2]     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.064      ; 1.143      ;
+; 0.939 ; cs_n_sync[2]   ; state.ST_SCAN    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.062      ; 1.158      ;
+; 0.941 ; mosi_sync[2]   ; best_angle[0]    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.062      ; 1.160      ;
+; 0.955 ; state.ST_REPLY ; best_angle[0]    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.062      ; 1.174      ;
+; 0.958 ; state.ST_REPLY ; miso_shift[4]    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.062      ; 1.177      ;
+; 0.962 ; state.ST_REPLY ; best_angle[1]    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.062      ; 1.181      ;
+; 0.965 ; state.ST_REPLY ; miso_shift[7]    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.062      ; 1.184      ;
+; 0.966 ; state.ST_SCAN  ; state.ST_REPLY   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.062      ; 1.185      ;
+; 0.968 ; state.ST_REPLY ; miso_shift[5]    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.062      ; 1.187      ;
+; 0.968 ; state.ST_REPLY ; best_angle[3]    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.062      ; 1.187      ;
+; 0.974 ; rx_shift[0]    ; best_angle[1]    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.062      ; 1.193      ;
+; 0.982 ; state.ST_REPLY ; state.ST_SCAN    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.062      ; 1.201      ;
+; 0.998 ; cs_n_sync[2]   ; miso_shift[7]    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.062      ; 1.217      ;
+; 1.007 ; cs_n_sync[2]   ; miso_shift[5]    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.062      ; 1.226      ;
+; 1.007 ; bit_cnt[0]     ; bit_cnt[2]       ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.062      ; 1.226      ;
+; 1.041 ; fpga_ready_reg ; fpga_ready_reg   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.062      ; 1.260      ;
+; 1.060 ; frame_cnt[0]   ; frame_cnt[3]     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.062      ; 1.279      ;
+; 1.063 ; cs_n_sync[2]   ; rx_shift[4]      ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.082      ; 1.302      ;
+; 1.070 ; state.ST_REPLY ; miso_shift[6]    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.062      ; 1.289      ;
+; 1.074 ; state.ST_REPLY ; best_angle[2]    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.062      ; 1.293      ;
+; 1.075 ; state.ST_REPLY ; frame_cnt[1]     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.054      ; 1.286      ;
+; 1.077 ; state.ST_REPLY ; frame_cnt[3]     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.054      ; 1.288      ;
+; 1.079 ; state.ST_REPLY ; frame_cnt[0]     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.054      ; 1.290      ;
+; 1.100 ; rx_shift[3]    ; rx_shift[4]      ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.082      ; 1.339      ;
+; 1.113 ; state.ST_REPLY ; frame_cnt[2]     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.054      ; 1.324      ;
+; 1.123 ; state.ST_READY ; state.ST_SCAN    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.062      ; 1.342      ;
+; 1.170 ; state.ST_SCAN  ; state.ST_READY   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.062      ; 1.389      ;
+; 1.173 ; frame_cnt[3]   ; frame_cnt[1]     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.062      ; 1.392      ;
+; 1.176 ; rx_shift[3]    ; best_strength[0] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.082      ; 1.415      ;
+; 1.178 ; state.ST_REPLY ; best_strength[3] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.082      ; 1.417      ;
+; 1.182 ; state.ST_REPLY ; rx_shift[5]      ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.082      ; 1.421      ;
+; 1.184 ; state.ST_REPLY ; rx_shift[6]      ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.082      ; 1.423      ;
+; 1.185 ; state.ST_REPLY ; best_strength[2] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.082      ; 1.424      ;
+; 1.187 ; state.ST_REPLY ; best_strength[0] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.082      ; 1.426      ;
+; 1.189 ; state.ST_REPLY ; best_strength[1] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.082      ; 1.428      ;
+; 1.222 ; sclk_sync[1]   ; fpga_ready_reg   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.067      ; 1.446      ;
+; 1.252 ; frame_cnt[2]   ; frame_cnt[1]     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.062      ; 1.471      ;
+; 1.282 ; state.ST_READY ; bit_cnt[0]       ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.057      ; 1.496      ;
+; 1.298 ; cs_n_sync[2]   ; rx_shift[6]      ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.082      ; 1.537      ;
+; 1.301 ; cs_n_sync[2]   ; rx_shift[5]      ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.082      ; 1.540      ;
+; 1.309 ; sclk_sync[2]   ; fpga_ready_reg   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.067      ; 1.533      ;
++-------+----------------+------------------+--------------+-------------+--------------+------------+------------+
+
+
++-----------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 85C Model Recovery: 'CLOCK_50'                                                                      ;
++--------+---------------+------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node     ; To Node          ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+---------------+------------------+--------------+-------------+--------------+------------+------------+
+; 17.938 ; rst_n_sync[2] ; miso_shift[7]    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.054     ; 2.003      ;
+; 17.938 ; rst_n_sync[2] ; miso_shift[6]    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.054     ; 2.003      ;
+; 17.938 ; rst_n_sync[2] ; miso_shift[5]    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.054     ; 2.003      ;
+; 17.938 ; rst_n_sync[2] ; miso_shift[4]    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.054     ; 2.003      ;
+; 17.938 ; rst_n_sync[2] ; best_angle[1]    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.054     ; 2.003      ;
+; 17.938 ; rst_n_sync[2] ; best_angle[0]    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.054     ; 2.003      ;
+; 17.938 ; rst_n_sync[2] ; best_angle[2]    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.054     ; 2.003      ;
+; 17.938 ; rst_n_sync[2] ; best_angle[3]    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.054     ; 2.003      ;
+; 17.964 ; rst_n_sync[2] ; best_strength[0] ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.067     ; 1.964      ;
+; 17.964 ; rst_n_sync[2] ; best_strength[1] ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.067     ; 1.964      ;
+; 17.964 ; rst_n_sync[2] ; best_strength[2] ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.067     ; 1.964      ;
+; 17.964 ; rst_n_sync[2] ; best_strength[3] ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.067     ; 1.964      ;
+; 17.964 ; rst_n_sync[2] ; rx_shift[4]      ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.067     ; 1.964      ;
+; 17.964 ; rst_n_sync[2] ; rx_shift[5]      ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.067     ; 1.964      ;
+; 17.964 ; rst_n_sync[2] ; rx_shift[6]      ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.067     ; 1.964      ;
+; 18.188 ; rst_n_sync[2] ; fpga_ready_reg   ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.054     ; 1.753      ;
+; 18.188 ; rst_n_sync[2] ; rx_shift[2]      ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.054     ; 1.753      ;
+; 18.188 ; rst_n_sync[2] ; rx_shift[1]      ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.054     ; 1.753      ;
+; 18.188 ; rst_n_sync[2] ; rx_shift[0]      ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.054     ; 1.753      ;
+; 18.188 ; rst_n_sync[2] ; state.ST_REPLY   ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.054     ; 1.753      ;
+; 18.188 ; rst_n_sync[2] ; state.ST_READY   ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.054     ; 1.753      ;
+; 18.188 ; rst_n_sync[2] ; state.ST_SCAN    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.054     ; 1.753      ;
+; 18.222 ; rst_n_sync[2] ; rx_shift[3]      ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.054     ; 1.719      ;
+; 18.233 ; rst_n_sync[2] ; bit_cnt[0]       ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.059     ; 1.703      ;
+; 18.233 ; rst_n_sync[2] ; bit_cnt[1]       ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.059     ; 1.703      ;
+; 18.233 ; rst_n_sync[2] ; bit_cnt[2]       ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.059     ; 1.703      ;
+; 18.649 ; rst_n_sync[2] ; frame_cnt[1]     ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.062     ; 1.284      ;
+; 18.649 ; rst_n_sync[2] ; frame_cnt[0]     ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.062     ; 1.284      ;
+; 18.649 ; rst_n_sync[2] ; frame_cnt[3]     ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.062     ; 1.284      ;
+; 18.649 ; rst_n_sync[2] ; frame_cnt[2]     ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.062     ; 1.284      ;
++--------+---------------+------------------+--------------+-------------+--------------+------------+------------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 85C Model Removal: 'CLOCK_50'                                                                      ;
++-------+---------------+------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node     ; To Node          ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+---------------+------------------+--------------+-------------+--------------+------------+------------+
+; 0.918 ; rst_n_sync[2] ; frame_cnt[1]     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.062      ; 1.137      ;
+; 0.918 ; rst_n_sync[2] ; frame_cnt[0]     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.062      ; 1.137      ;
+; 0.918 ; rst_n_sync[2] ; frame_cnt[3]     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.062      ; 1.137      ;
+; 0.918 ; rst_n_sync[2] ; frame_cnt[2]     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.062      ; 1.137      ;
+; 1.316 ; rst_n_sync[2] ; rx_shift[3]      ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.070      ; 1.543      ;
+; 1.319 ; rst_n_sync[2] ; bit_cnt[0]       ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.065      ; 1.541      ;
+; 1.319 ; rst_n_sync[2] ; bit_cnt[1]       ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.065      ; 1.541      ;
+; 1.319 ; rst_n_sync[2] ; bit_cnt[2]       ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.065      ; 1.541      ;
+; 1.346 ; rst_n_sync[2] ; fpga_ready_reg   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.070      ; 1.573      ;
+; 1.346 ; rst_n_sync[2] ; rx_shift[2]      ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.070      ; 1.573      ;
+; 1.346 ; rst_n_sync[2] ; rx_shift[1]      ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.070      ; 1.573      ;
+; 1.346 ; rst_n_sync[2] ; rx_shift[0]      ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.070      ; 1.573      ;
+; 1.346 ; rst_n_sync[2] ; state.ST_REPLY   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.070      ; 1.573      ;
+; 1.346 ; rst_n_sync[2] ; state.ST_READY   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.070      ; 1.573      ;
+; 1.346 ; rst_n_sync[2] ; state.ST_SCAN    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.070      ; 1.573      ;
+; 1.563 ; rst_n_sync[2] ; best_strength[0] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.090      ; 1.810      ;
+; 1.563 ; rst_n_sync[2] ; best_strength[1] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.090      ; 1.810      ;
+; 1.563 ; rst_n_sync[2] ; best_strength[2] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.090      ; 1.810      ;
+; 1.563 ; rst_n_sync[2] ; best_strength[3] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.090      ; 1.810      ;
+; 1.563 ; rst_n_sync[2] ; rx_shift[4]      ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.090      ; 1.810      ;
+; 1.563 ; rst_n_sync[2] ; rx_shift[5]      ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.090      ; 1.810      ;
+; 1.563 ; rst_n_sync[2] ; rx_shift[6]      ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.090      ; 1.810      ;
+; 1.585 ; rst_n_sync[2] ; miso_shift[7]    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.070      ; 1.812      ;
+; 1.585 ; rst_n_sync[2] ; miso_shift[6]    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.070      ; 1.812      ;
+; 1.585 ; rst_n_sync[2] ; miso_shift[5]    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.070      ; 1.812      ;
+; 1.585 ; rst_n_sync[2] ; miso_shift[4]    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.070      ; 1.812      ;
+; 1.585 ; rst_n_sync[2] ; best_angle[1]    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.070      ; 1.812      ;
+; 1.585 ; rst_n_sync[2] ; best_angle[0]    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.070      ; 1.812      ;
+; 1.585 ; rst_n_sync[2] ; best_angle[2]    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.070      ; 1.812      ;
+; 1.585 ; rst_n_sync[2] ; best_angle[3]    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.070      ; 1.812      ;
++-------+---------------+------------------+--------------+-------------+--------------+------------+------------+
+
+
+-----------------------------------------------
+; Slow 1200mV 85C Model Metastability Summary ;
+-----------------------------------------------
+The design MTBF is not calculated because there are no specified synchronizers in the design.
+Number of Synchronizer Chains Found: 4
+Shortest Synchronizer Chain: 2 Registers
+Fraction of Chains for which MTBFs Could Not be Calculated: 1.000
+Worst Case Available Settling Time: 34.389 ns
+
+
+
+
++--------------------------------------------------+
+; Slow 1200mV 0C Model Fmax Summary                ;
++------------+-----------------+------------+------+
+; Fmax       ; Restricted Fmax ; Clock Name ; Note ;
++------------+-----------------+------------+------+
+; 236.13 MHz ; 236.13 MHz      ; CLOCK_50   ;      ;
++------------+-----------------+------------+------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+
+
++------------------------------------+
+; Slow 1200mV 0C Model Setup Summary ;
++----------+--------+----------------+
+; Clock    ; Slack  ; End Point TNS  ;
++----------+--------+----------------+
+; CLOCK_50 ; 15.765 ; 0.000          ;
++----------+--------+----------------+
+
+
++-----------------------------------+
+; Slow 1200mV 0C Model Hold Summary ;
++----------+-------+----------------+
+; Clock    ; Slack ; End Point TNS  ;
++----------+-------+----------------+
+; CLOCK_50 ; 0.312 ; 0.000          ;
++----------+-------+----------------+
+
+
++---------------------------------------+
+; Slow 1200mV 0C Model Recovery Summary ;
++----------+--------+-------------------+
+; Clock    ; Slack  ; End Point TNS     ;
++----------+--------+-------------------+
+; CLOCK_50 ; 18.179 ; 0.000             ;
++----------+--------+-------------------+
+
+
++--------------------------------------+
+; Slow 1200mV 0C Model Removal Summary ;
++----------+-------+-------------------+
+; Clock    ; Slack ; End Point TNS     ;
++----------+-------+-------------------+
+; CLOCK_50 ; 0.828 ; 0.000             ;
++----------+-------+-------------------+
+
+
++--------------------------------------------------+
+; Slow 1200mV 0C Model Minimum Pulse Width Summary ;
++----------+-------+-------------------------------+
+; Clock    ; Slack ; End Point TNS                 ;
++----------+-------+-------------------------------+
+; CLOCK_50 ; 9.596 ; 0.000                         ;
++----------+-------+-------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 0C Model Setup: 'CLOCK_50'                                                                             ;
++--------+------------------+------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node        ; To Node          ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+------------------+------------------+--------------+-------------+--------------+------------+------------+
+; 15.765 ; cs_n_sync[2]     ; best_angle[1]    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.055     ; 4.175      ;
+; 15.765 ; cs_n_sync[2]     ; best_angle[0]    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.055     ; 4.175      ;
+; 15.765 ; cs_n_sync[2]     ; best_angle[2]    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.055     ; 4.175      ;
+; 15.765 ; cs_n_sync[2]     ; best_angle[3]    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.055     ; 4.175      ;
+; 15.881 ; state.ST_REPLY   ; best_angle[1]    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.055     ; 4.059      ;
+; 15.881 ; state.ST_REPLY   ; best_angle[0]    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.055     ; 4.059      ;
+; 15.881 ; state.ST_REPLY   ; best_angle[2]    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.055     ; 4.059      ;
+; 15.881 ; state.ST_REPLY   ; best_angle[3]    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.055     ; 4.059      ;
+; 15.890 ; sclk_sync[1]     ; best_angle[1]    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.050     ; 4.055      ;
+; 15.890 ; sclk_sync[1]     ; best_angle[0]    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.050     ; 4.055      ;
+; 15.890 ; sclk_sync[1]     ; best_angle[2]    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.050     ; 4.055      ;
+; 15.890 ; sclk_sync[1]     ; best_angle[3]    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.050     ; 4.055      ;
+; 15.952 ; state.ST_SCAN    ; best_angle[1]    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.055     ; 3.988      ;
+; 15.952 ; state.ST_SCAN    ; best_angle[0]    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.055     ; 3.988      ;
+; 15.952 ; state.ST_SCAN    ; best_angle[2]    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.055     ; 3.988      ;
+; 15.952 ; state.ST_SCAN    ; best_angle[3]    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.055     ; 3.988      ;
+; 16.076 ; state.ST_SCAN    ; bit_cnt[1]       ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.060     ; 3.859      ;
+; 16.076 ; state.ST_SCAN    ; bit_cnt[2]       ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.060     ; 3.859      ;
+; 16.095 ; rx_shift[3]      ; best_angle[1]    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.055     ; 3.845      ;
+; 16.095 ; rx_shift[3]      ; best_angle[0]    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.055     ; 3.845      ;
+; 16.095 ; rx_shift[3]      ; best_angle[2]    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.055     ; 3.845      ;
+; 16.095 ; rx_shift[3]      ; best_angle[3]    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.055     ; 3.845      ;
+; 16.210 ; bit_cnt[0]       ; best_angle[1]    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.050     ; 3.735      ;
+; 16.210 ; bit_cnt[0]       ; best_angle[0]    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.050     ; 3.735      ;
+; 16.210 ; bit_cnt[0]       ; best_angle[2]    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.050     ; 3.735      ;
+; 16.210 ; bit_cnt[0]       ; best_angle[3]    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.050     ; 3.735      ;
+; 16.327 ; state.ST_SCAN    ; bit_cnt[0]       ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.060     ; 3.608      ;
+; 16.340 ; bit_cnt[2]       ; best_angle[1]    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.050     ; 3.605      ;
+; 16.340 ; bit_cnt[2]       ; best_angle[0]    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.050     ; 3.605      ;
+; 16.340 ; bit_cnt[2]       ; best_angle[2]    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.050     ; 3.605      ;
+; 16.340 ; bit_cnt[2]       ; best_angle[3]    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.050     ; 3.605      ;
+; 16.420 ; bit_cnt[1]       ; best_angle[1]    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.050     ; 3.525      ;
+; 16.420 ; bit_cnt[1]       ; best_angle[0]    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.050     ; 3.525      ;
+; 16.420 ; bit_cnt[1]       ; best_angle[2]    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.050     ; 3.525      ;
+; 16.420 ; bit_cnt[1]       ; best_angle[3]    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.050     ; 3.525      ;
+; 16.483 ; bit_cnt[1]       ; miso_shift[7]    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.050     ; 3.462      ;
+; 16.483 ; bit_cnt[1]       ; miso_shift[6]    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.050     ; 3.462      ;
+; 16.483 ; bit_cnt[1]       ; miso_shift[5]    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.050     ; 3.462      ;
+; 16.483 ; bit_cnt[1]       ; miso_shift[4]    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.050     ; 3.462      ;
+; 16.495 ; bit_cnt[2]       ; miso_shift[7]    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.050     ; 3.450      ;
+; 16.495 ; bit_cnt[2]       ; miso_shift[6]    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.050     ; 3.450      ;
+; 16.495 ; bit_cnt[2]       ; miso_shift[5]    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.050     ; 3.450      ;
+; 16.495 ; bit_cnt[2]       ; miso_shift[4]    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.050     ; 3.450      ;
+; 16.514 ; bit_cnt[1]       ; bit_cnt[1]       ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.055     ; 3.426      ;
+; 16.514 ; bit_cnt[1]       ; bit_cnt[2]       ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.055     ; 3.426      ;
+; 16.526 ; bit_cnt[2]       ; bit_cnt[1]       ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.055     ; 3.414      ;
+; 16.526 ; bit_cnt[2]       ; bit_cnt[2]       ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.055     ; 3.414      ;
+; 16.548 ; cs_n_sync[2]     ; best_strength[0] ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.066     ; 3.381      ;
+; 16.548 ; cs_n_sync[2]     ; best_strength[1] ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.066     ; 3.381      ;
+; 16.548 ; cs_n_sync[2]     ; best_strength[2] ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.066     ; 3.381      ;
+; 16.548 ; cs_n_sync[2]     ; best_strength[3] ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.066     ; 3.381      ;
+; 16.554 ; best_strength[1] ; best_angle[1]    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.072     ; 3.369      ;
+; 16.554 ; best_strength[1] ; best_angle[0]    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.072     ; 3.369      ;
+; 16.554 ; best_strength[1] ; best_angle[2]    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.072     ; 3.369      ;
+; 16.554 ; best_strength[1] ; best_angle[3]    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.072     ; 3.369      ;
+; 16.558 ; best_strength[0] ; best_angle[1]    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.072     ; 3.365      ;
+; 16.558 ; best_strength[0] ; best_angle[0]    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.072     ; 3.365      ;
+; 16.558 ; best_strength[0] ; best_angle[2]    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.072     ; 3.365      ;
+; 16.558 ; best_strength[0] ; best_angle[3]    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.072     ; 3.365      ;
+; 16.664 ; state.ST_REPLY   ; best_strength[0] ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.066     ; 3.265      ;
+; 16.664 ; state.ST_REPLY   ; best_strength[1] ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.066     ; 3.265      ;
+; 16.664 ; state.ST_REPLY   ; best_strength[2] ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.066     ; 3.265      ;
+; 16.664 ; state.ST_REPLY   ; best_strength[3] ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.066     ; 3.265      ;
+; 16.672 ; sclk_sync[1]     ; bit_cnt[1]       ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.055     ; 3.268      ;
+; 16.673 ; sclk_sync[1]     ; best_strength[0] ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.061     ; 3.261      ;
+; 16.673 ; sclk_sync[1]     ; best_strength[1] ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.061     ; 3.261      ;
+; 16.673 ; sclk_sync[1]     ; best_strength[2] ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.061     ; 3.261      ;
+; 16.673 ; sclk_sync[1]     ; best_strength[3] ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.061     ; 3.261      ;
+; 16.676 ; sclk_sync[1]     ; bit_cnt[2]       ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.055     ; 3.264      ;
+; 16.686 ; cs_n_sync[2]     ; frame_cnt[1]     ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.063     ; 3.246      ;
+; 16.686 ; cs_n_sync[2]     ; frame_cnt[0]     ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.063     ; 3.246      ;
+; 16.686 ; cs_n_sync[2]     ; frame_cnt[3]     ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.063     ; 3.246      ;
+; 16.686 ; cs_n_sync[2]     ; frame_cnt[2]     ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.063     ; 3.246      ;
+; 16.694 ; bit_cnt[0]       ; miso_shift[7]    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.050     ; 3.251      ;
+; 16.694 ; bit_cnt[0]       ; miso_shift[6]    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.050     ; 3.251      ;
+; 16.694 ; bit_cnt[0]       ; miso_shift[5]    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.050     ; 3.251      ;
+; 16.694 ; bit_cnt[0]       ; miso_shift[4]    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.050     ; 3.251      ;
+; 16.718 ; sclk_sync[2]     ; bit_cnt[1]       ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.055     ; 3.222      ;
+; 16.722 ; sclk_sync[2]     ; bit_cnt[2]       ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.055     ; 3.218      ;
+; 16.725 ; bit_cnt[0]       ; bit_cnt[1]       ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.055     ; 3.215      ;
+; 16.725 ; bit_cnt[0]       ; bit_cnt[2]       ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.055     ; 3.215      ;
+; 16.762 ; state.ST_SCAN    ; best_strength[0] ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.066     ; 3.167      ;
+; 16.762 ; state.ST_SCAN    ; best_strength[1] ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.066     ; 3.167      ;
+; 16.762 ; state.ST_SCAN    ; best_strength[2] ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.066     ; 3.167      ;
+; 16.762 ; state.ST_SCAN    ; best_strength[3] ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.066     ; 3.167      ;
+; 16.765 ; bit_cnt[1]       ; bit_cnt[0]       ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.055     ; 3.175      ;
+; 16.777 ; sclk_sync[1]     ; miso_shift[7]    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.050     ; 3.168      ;
+; 16.777 ; sclk_sync[1]     ; miso_shift[6]    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.050     ; 3.168      ;
+; 16.777 ; sclk_sync[1]     ; miso_shift[5]    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.050     ; 3.168      ;
+; 16.777 ; sclk_sync[1]     ; miso_shift[4]    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.050     ; 3.168      ;
+; 16.777 ; bit_cnt[2]       ; bit_cnt[0]       ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.055     ; 3.163      ;
+; 16.782 ; rx_shift[4]      ; best_angle[1]    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.072     ; 3.141      ;
+; 16.782 ; rx_shift[4]      ; best_angle[0]    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.072     ; 3.141      ;
+; 16.782 ; rx_shift[4]      ; best_angle[2]    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.072     ; 3.141      ;
+; 16.782 ; rx_shift[4]      ; best_angle[3]    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.072     ; 3.141      ;
+; 16.825 ; sclk_sync[2]     ; best_angle[1]    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.050     ; 3.120      ;
+; 16.825 ; sclk_sync[2]     ; best_angle[0]    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.050     ; 3.120      ;
+; 16.825 ; sclk_sync[2]     ; best_angle[2]    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.050     ; 3.120      ;
+; 16.825 ; sclk_sync[2]     ; best_angle[3]    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.050     ; 3.120      ;
+; 16.878 ; rx_shift[3]      ; best_strength[0] ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.066     ; 3.051      ;
++--------+------------------+------------------+--------------+-------------+--------------+------------+------------+
+
+
++-----------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 0C Model Hold: 'CLOCK_50'                                                                           ;
++-------+----------------+------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node      ; To Node          ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+----------------+------------------+--------------+-------------+--------------+------------+------------+
+; 0.312 ; bit_cnt[0]     ; bit_cnt[0]       ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.055      ; 0.511      ;
+; 0.312 ; bit_cnt[1]     ; bit_cnt[1]       ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.055      ; 0.511      ;
+; 0.312 ; bit_cnt[2]     ; bit_cnt[2]       ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.055      ; 0.511      ;
+; 0.312 ; state.ST_REPLY ; state.ST_REPLY   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.055      ; 0.511      ;
+; 0.312 ; state.ST_READY ; state.ST_READY   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.055      ; 0.511      ;
+; 0.312 ; state.ST_SCAN  ; state.ST_SCAN    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.055      ; 0.511      ;
+; 0.312 ; frame_cnt[1]   ; frame_cnt[1]     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.055      ; 0.511      ;
+; 0.312 ; frame_cnt[3]   ; frame_cnt[3]     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.055      ; 0.511      ;
+; 0.312 ; frame_cnt[2]   ; frame_cnt[2]     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.055      ; 0.511      ;
+; 0.320 ; frame_cnt[0]   ; frame_cnt[0]     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.055      ; 0.519      ;
+; 0.338 ; frame_cnt[2]   ; frame_cnt[3]     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.055      ; 0.537      ;
+; 0.339 ; miso_shift[5]  ; miso_shift[6]    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.055      ; 0.538      ;
+; 0.339 ; mosi_sync[0]   ; mosi_sync[1]     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.055      ; 0.538      ;
+; 0.340 ; best_angle[1]  ; miso_shift[5]    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.055      ; 0.539      ;
+; 0.340 ; cs_n_sync[0]   ; cs_n_sync[1]     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.055      ; 0.539      ;
+; 0.341 ; rst_n_sync[1]  ; rst_n_sync[2]    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.055      ; 0.540      ;
+; 0.341 ; frame_cnt[0]   ; frame_cnt[1]     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.055      ; 0.540      ;
+; 0.342 ; rst_n_sync[0]  ; rst_n_sync[1]    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.055      ; 0.541      ;
+; 0.345 ; rx_shift[6]    ; best_strength[3] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.055      ; 0.544      ;
+; 0.351 ; rx_shift[4]    ; best_strength[1] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.055      ; 0.550      ;
+; 0.351 ; rx_shift[4]    ; rx_shift[5]      ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.055      ; 0.550      ;
+; 0.352 ; rx_shift[5]    ; best_strength[2] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.055      ; 0.551      ;
+; 0.352 ; rx_shift[5]    ; rx_shift[6]      ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.055      ; 0.551      ;
+; 0.356 ; bit_cnt[0]     ; bit_cnt[1]       ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.055      ; 0.555      ;
+; 0.389 ; cs_n_sync[2]   ; state.ST_READY   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.055      ; 0.588      ;
+; 0.475 ; state.ST_REPLY ; fpga_ready_reg   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.055      ; 0.674      ;
+; 0.483 ; state.ST_REPLY ; rx_shift[1]      ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.055      ; 0.682      ;
+; 0.483 ; state.ST_REPLY ; rx_shift[0]      ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.055      ; 0.682      ;
+; 0.484 ; state.ST_REPLY ; rx_shift[2]      ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.055      ; 0.683      ;
+; 0.486 ; rx_shift[2]    ; rx_shift[3]      ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.055      ; 0.685      ;
+; 0.497 ; best_angle[0]  ; miso_shift[4]    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.055      ; 0.696      ;
+; 0.499 ; best_angle[3]  ; miso_shift[7]    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.055      ; 0.698      ;
+; 0.510 ; best_angle[2]  ; miso_shift[6]    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.055      ; 0.709      ;
+; 0.513 ; miso_shift[4]  ; miso_shift[5]    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.055      ; 0.712      ;
+; 0.528 ; rx_shift[1]    ; rx_shift[2]      ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.055      ; 0.727      ;
+; 0.528 ; rx_shift[0]    ; rx_shift[1]      ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.055      ; 0.727      ;
+; 0.551 ; state.ST_READY ; state.ST_REPLY   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.055      ; 0.750      ;
+; 0.558 ; state.ST_READY ; fpga_ready_reg   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.055      ; 0.757      ;
+; 0.581 ; state.ST_REPLY ; state.ST_READY   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.055      ; 0.780      ;
+; 0.585 ; cs_n_sync[2]   ; state.ST_REPLY   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.055      ; 0.784      ;
+; 0.586 ; cs_n_sync[2]   ; rx_shift[1]      ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.055      ; 0.785      ;
+; 0.587 ; cs_n_sync[2]   ; rx_shift[0]      ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.055      ; 0.786      ;
+; 0.588 ; cs_n_sync[2]   ; rx_shift[2]      ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.055      ; 0.787      ;
+; 0.602 ; cs_n_sync[1]   ; cs_n_sync[2]     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.055      ; 0.801      ;
+; 0.616 ; cs_n_sync[2]   ; rx_shift[3]      ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.055      ; 0.815      ;
+; 0.620 ; frame_cnt[1]   ; frame_cnt[2]     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.055      ; 0.819      ;
+; 0.631 ; sclk_sync[0]   ; sclk_sync[1]     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.055      ; 0.830      ;
+; 0.649 ; mosi_sync[2]   ; rx_shift[0]      ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.055      ; 0.848      ;
+; 0.650 ; sclk_sync[1]   ; sclk_sync[2]     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.055      ; 0.849      ;
+; 0.680 ; miso_shift[6]  ; miso_shift[7]    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.055      ; 0.879      ;
+; 0.688 ; state.ST_REPLY ; rx_shift[3]      ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.055      ; 0.887      ;
+; 0.705 ; rx_shift[2]    ; best_angle[3]    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.055      ; 0.904      ;
+; 0.709 ; frame_cnt[3]   ; frame_cnt[2]     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.055      ; 0.908      ;
+; 0.735 ; bit_cnt[1]     ; bit_cnt[2]       ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.055      ; 0.934      ;
+; 0.790 ; frame_cnt[1]   ; frame_cnt[3]     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.055      ; 0.989      ;
+; 0.790 ; frame_cnt[0]   ; frame_cnt[2]     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.055      ; 0.989      ;
+; 0.807 ; rx_shift[1]    ; best_angle[2]    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.055      ; 1.006      ;
+; 0.821 ; cs_n_sync[2]   ; fpga_ready_reg   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.055      ; 1.020      ;
+; 0.826 ; cs_n_sync[2]   ; miso_shift[6]    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.055      ; 1.025      ;
+; 0.840 ; cs_n_sync[2]   ; state.ST_SCAN    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.055      ; 1.039      ;
+; 0.850 ; mosi_sync[1]   ; mosi_sync[2]     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.057      ; 1.051      ;
+; 0.856 ; mosi_sync[2]   ; best_angle[0]    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.055      ; 1.055      ;
+; 0.858 ; state.ST_REPLY ; best_angle[0]    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.055      ; 1.057      ;
+; 0.862 ; state.ST_REPLY ; miso_shift[4]    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.055      ; 1.061      ;
+; 0.865 ; state.ST_REPLY ; best_angle[1]    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.055      ; 1.064      ;
+; 0.866 ; state.ST_SCAN  ; state.ST_REPLY   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.055      ; 1.065      ;
+; 0.868 ; state.ST_REPLY ; miso_shift[7]    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.055      ; 1.067      ;
+; 0.870 ; state.ST_REPLY ; miso_shift[5]    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.055      ; 1.069      ;
+; 0.871 ; state.ST_REPLY ; best_angle[3]    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.055      ; 1.070      ;
+; 0.889 ; state.ST_REPLY ; state.ST_SCAN    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.055      ; 1.088      ;
+; 0.899 ; rx_shift[0]    ; best_angle[1]    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.055      ; 1.098      ;
+; 0.913 ; bit_cnt[0]     ; bit_cnt[2]       ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.055      ; 1.112      ;
+; 0.915 ; cs_n_sync[2]   ; miso_shift[7]    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.055      ; 1.114      ;
+; 0.920 ; cs_n_sync[2]   ; miso_shift[5]    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.055      ; 1.119      ;
+; 0.938 ; fpga_ready_reg ; fpga_ready_reg   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.055      ; 1.137      ;
+; 0.954 ; frame_cnt[0]   ; frame_cnt[3]     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.055      ; 1.153      ;
+; 0.969 ; cs_n_sync[2]   ; rx_shift[4]      ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.072      ; 1.185      ;
+; 0.969 ; state.ST_REPLY ; miso_shift[6]    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.055      ; 1.168      ;
+; 0.970 ; state.ST_REPLY ; best_angle[2]    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.055      ; 1.169      ;
+; 0.971 ; state.ST_REPLY ; frame_cnt[1]     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.047      ; 1.162      ;
+; 0.974 ; state.ST_REPLY ; frame_cnt[3]     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.047      ; 1.165      ;
+; 0.974 ; state.ST_REPLY ; frame_cnt[0]     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.047      ; 1.165      ;
+; 1.003 ; rx_shift[3]    ; rx_shift[4]      ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.072      ; 1.219      ;
+; 1.007 ; state.ST_REPLY ; frame_cnt[2]     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.047      ; 1.198      ;
+; 1.008 ; state.ST_READY ; state.ST_SCAN    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.055      ; 1.207      ;
+; 1.039 ; state.ST_SCAN  ; state.ST_READY   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.055      ; 1.238      ;
+; 1.063 ; frame_cnt[3]   ; frame_cnt[1]     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.055      ; 1.262      ;
+; 1.069 ; rx_shift[3]    ; best_strength[0] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.072      ; 1.285      ;
+; 1.072 ; state.ST_REPLY ; best_strength[3] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.072      ; 1.288      ;
+; 1.074 ; state.ST_REPLY ; rx_shift[5]      ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.072      ; 1.290      ;
+; 1.074 ; state.ST_REPLY ; rx_shift[6]      ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.072      ; 1.290      ;
+; 1.075 ; state.ST_REPLY ; best_strength[2] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.072      ; 1.291      ;
+; 1.076 ; state.ST_REPLY ; best_strength[0] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.072      ; 1.292      ;
+; 1.078 ; state.ST_REPLY ; best_strength[1] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.072      ; 1.294      ;
+; 1.121 ; sclk_sync[1]   ; fpga_ready_reg   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.060      ; 1.325      ;
+; 1.132 ; frame_cnt[2]   ; frame_cnt[1]     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.055      ; 1.331      ;
+; 1.164 ; state.ST_READY ; bit_cnt[0]       ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.050      ; 1.358      ;
+; 1.180 ; cs_n_sync[2]   ; rx_shift[6]      ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.072      ; 1.396      ;
+; 1.183 ; cs_n_sync[2]   ; rx_shift[5]      ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.072      ; 1.399      ;
+; 1.186 ; sclk_sync[2]   ; fpga_ready_reg   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.060      ; 1.390      ;
++-------+----------------+------------------+--------------+-------------+--------------+------------+------------+
+
+
++-----------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 0C Model Recovery: 'CLOCK_50'                                                                       ;
++--------+---------------+------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node     ; To Node          ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+---------------+------------------+--------------+-------------+--------------+------------+------------+
+; 18.179 ; rst_n_sync[2] ; miso_shift[7]    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.047     ; 1.769      ;
+; 18.179 ; rst_n_sync[2] ; miso_shift[6]    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.047     ; 1.769      ;
+; 18.179 ; rst_n_sync[2] ; miso_shift[5]    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.047     ; 1.769      ;
+; 18.179 ; rst_n_sync[2] ; miso_shift[4]    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.047     ; 1.769      ;
+; 18.179 ; rst_n_sync[2] ; best_angle[1]    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.047     ; 1.769      ;
+; 18.179 ; rst_n_sync[2] ; best_angle[0]    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.047     ; 1.769      ;
+; 18.179 ; rst_n_sync[2] ; best_angle[2]    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.047     ; 1.769      ;
+; 18.179 ; rst_n_sync[2] ; best_angle[3]    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.047     ; 1.769      ;
+; 18.185 ; rst_n_sync[2] ; best_strength[0] ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.058     ; 1.752      ;
+; 18.185 ; rst_n_sync[2] ; best_strength[1] ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.058     ; 1.752      ;
+; 18.185 ; rst_n_sync[2] ; best_strength[2] ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.058     ; 1.752      ;
+; 18.185 ; rst_n_sync[2] ; best_strength[3] ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.058     ; 1.752      ;
+; 18.185 ; rst_n_sync[2] ; rx_shift[4]      ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.058     ; 1.752      ;
+; 18.185 ; rst_n_sync[2] ; rx_shift[5]      ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.058     ; 1.752      ;
+; 18.185 ; rst_n_sync[2] ; rx_shift[6]      ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.058     ; 1.752      ;
+; 18.395 ; rst_n_sync[2] ; fpga_ready_reg   ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.047     ; 1.553      ;
+; 18.395 ; rst_n_sync[2] ; rx_shift[2]      ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.047     ; 1.553      ;
+; 18.395 ; rst_n_sync[2] ; rx_shift[1]      ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.047     ; 1.553      ;
+; 18.395 ; rst_n_sync[2] ; rx_shift[0]      ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.047     ; 1.553      ;
+; 18.395 ; rst_n_sync[2] ; state.ST_REPLY   ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.047     ; 1.553      ;
+; 18.395 ; rst_n_sync[2] ; state.ST_READY   ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.047     ; 1.553      ;
+; 18.395 ; rst_n_sync[2] ; state.ST_SCAN    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.047     ; 1.553      ;
+; 18.429 ; rst_n_sync[2] ; rx_shift[3]      ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.047     ; 1.519      ;
+; 18.430 ; rst_n_sync[2] ; bit_cnt[0]       ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.052     ; 1.513      ;
+; 18.430 ; rst_n_sync[2] ; bit_cnt[1]       ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.052     ; 1.513      ;
+; 18.430 ; rst_n_sync[2] ; bit_cnt[2]       ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.052     ; 1.513      ;
+; 18.797 ; rst_n_sync[2] ; frame_cnt[1]     ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.055     ; 1.143      ;
+; 18.797 ; rst_n_sync[2] ; frame_cnt[0]     ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.055     ; 1.143      ;
+; 18.797 ; rst_n_sync[2] ; frame_cnt[3]     ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.055     ; 1.143      ;
+; 18.797 ; rst_n_sync[2] ; frame_cnt[2]     ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.055     ; 1.143      ;
++--------+---------------+------------------+--------------+-------------+--------------+------------+------------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 0C Model Removal: 'CLOCK_50'                                                                       ;
++-------+---------------+------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node     ; To Node          ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+---------------+------------------+--------------+-------------+--------------+------------+------------+
+; 0.828 ; rst_n_sync[2] ; frame_cnt[1]     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.055      ; 1.027      ;
+; 0.828 ; rst_n_sync[2] ; frame_cnt[0]     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.055      ; 1.027      ;
+; 0.828 ; rst_n_sync[2] ; frame_cnt[3]     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.055      ; 1.027      ;
+; 0.828 ; rst_n_sync[2] ; frame_cnt[2]     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.055      ; 1.027      ;
+; 1.199 ; rst_n_sync[2] ; bit_cnt[0]       ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.058      ; 1.401      ;
+; 1.199 ; rst_n_sync[2] ; bit_cnt[1]       ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.058      ; 1.401      ;
+; 1.199 ; rst_n_sync[2] ; bit_cnt[2]       ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.058      ; 1.401      ;
+; 1.201 ; rst_n_sync[2] ; rx_shift[3]      ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.063      ; 1.408      ;
+; 1.225 ; rst_n_sync[2] ; fpga_ready_reg   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.063      ; 1.432      ;
+; 1.225 ; rst_n_sync[2] ; rx_shift[2]      ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.063      ; 1.432      ;
+; 1.225 ; rst_n_sync[2] ; rx_shift[1]      ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.063      ; 1.432      ;
+; 1.225 ; rst_n_sync[2] ; rx_shift[0]      ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.063      ; 1.432      ;
+; 1.225 ; rst_n_sync[2] ; state.ST_REPLY   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.063      ; 1.432      ;
+; 1.225 ; rst_n_sync[2] ; state.ST_READY   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.063      ; 1.432      ;
+; 1.225 ; rst_n_sync[2] ; state.ST_SCAN    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.063      ; 1.432      ;
+; 1.423 ; rst_n_sync[2] ; best_strength[0] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.080      ; 1.647      ;
+; 1.423 ; rst_n_sync[2] ; best_strength[1] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.080      ; 1.647      ;
+; 1.423 ; rst_n_sync[2] ; best_strength[2] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.080      ; 1.647      ;
+; 1.423 ; rst_n_sync[2] ; best_strength[3] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.080      ; 1.647      ;
+; 1.423 ; rst_n_sync[2] ; rx_shift[4]      ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.080      ; 1.647      ;
+; 1.423 ; rst_n_sync[2] ; rx_shift[5]      ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.080      ; 1.647      ;
+; 1.423 ; rst_n_sync[2] ; rx_shift[6]      ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.080      ; 1.647      ;
+; 1.449 ; rst_n_sync[2] ; miso_shift[7]    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.063      ; 1.656      ;
+; 1.449 ; rst_n_sync[2] ; miso_shift[6]    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.063      ; 1.656      ;
+; 1.449 ; rst_n_sync[2] ; miso_shift[5]    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.063      ; 1.656      ;
+; 1.449 ; rst_n_sync[2] ; miso_shift[4]    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.063      ; 1.656      ;
+; 1.449 ; rst_n_sync[2] ; best_angle[1]    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.063      ; 1.656      ;
+; 1.449 ; rst_n_sync[2] ; best_angle[0]    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.063      ; 1.656      ;
+; 1.449 ; rst_n_sync[2] ; best_angle[2]    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.063      ; 1.656      ;
+; 1.449 ; rst_n_sync[2] ; best_angle[3]    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.063      ; 1.656      ;
++-------+---------------+------------------+--------------+-------------+--------------+------------+------------+
+
+
+----------------------------------------------
+; Slow 1200mV 0C Model Metastability Summary ;
+----------------------------------------------
+The design MTBF is not calculated because there are no specified synchronizers in the design.
+Number of Synchronizer Chains Found: 4
+Shortest Synchronizer Chain: 2 Registers
+Fraction of Chains for which MTBFs Could Not be Calculated: 1.000
+Worst Case Available Settling Time: 34.924 ns
+
+
+
+
++------------------------------------+
+; Fast 1200mV 0C Model Setup Summary ;
++----------+--------+----------------+
+; Clock    ; Slack  ; End Point TNS  ;
++----------+--------+----------------+
+; CLOCK_50 ; 17.289 ; 0.000          ;
++----------+--------+----------------+
+
+
++-----------------------------------+
+; Fast 1200mV 0C Model Hold Summary ;
++----------+-------+----------------+
+; Clock    ; Slack ; End Point TNS  ;
++----------+-------+----------------+
+; CLOCK_50 ; 0.186 ; 0.000          ;
++----------+-------+----------------+
+
+
++---------------------------------------+
+; Fast 1200mV 0C Model Recovery Summary ;
++----------+--------+-------------------+
+; Clock    ; Slack  ; End Point TNS     ;
++----------+--------+-------------------+
+; CLOCK_50 ; 18.789 ; 0.000             ;
++----------+--------+-------------------+
+
+
++--------------------------------------+
+; Fast 1200mV 0C Model Removal Summary ;
++----------+-------+-------------------+
+; Clock    ; Slack ; End Point TNS     ;
++----------+-------+-------------------+
+; CLOCK_50 ; 0.501 ; 0.000             ;
++----------+-------+-------------------+
+
+
++--------------------------------------------------+
+; Fast 1200mV 0C Model Minimum Pulse Width Summary ;
++----------+-------+-------------------------------+
+; Clock    ; Slack ; End Point TNS                 ;
++----------+-------+-------------------------------+
+; CLOCK_50 ; 9.273 ; 0.000                         ;
++----------+-------+-------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------+
+; Fast 1200mV 0C Model Setup: 'CLOCK_50'                                                                             ;
++--------+------------------+------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node        ; To Node          ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+------------------+------------------+--------------+-------------+--------------+------------+------------+
+; 17.289 ; cs_n_sync[2]     ; best_angle[1]    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.036     ; 2.662      ;
+; 17.289 ; cs_n_sync[2]     ; best_angle[0]    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.036     ; 2.662      ;
+; 17.289 ; cs_n_sync[2]     ; best_angle[2]    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.036     ; 2.662      ;
+; 17.289 ; cs_n_sync[2]     ; best_angle[3]    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.036     ; 2.662      ;
+; 17.369 ; state.ST_REPLY   ; best_angle[1]    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.036     ; 2.582      ;
+; 17.369 ; state.ST_REPLY   ; best_angle[0]    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.036     ; 2.582      ;
+; 17.369 ; state.ST_REPLY   ; best_angle[2]    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.036     ; 2.582      ;
+; 17.369 ; state.ST_REPLY   ; best_angle[3]    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.036     ; 2.582      ;
+; 17.416 ; sclk_sync[1]     ; best_angle[1]    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.032     ; 2.539      ;
+; 17.416 ; sclk_sync[1]     ; best_angle[0]    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.032     ; 2.539      ;
+; 17.416 ; sclk_sync[1]     ; best_angle[2]    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.032     ; 2.539      ;
+; 17.416 ; sclk_sync[1]     ; best_angle[3]    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.032     ; 2.539      ;
+; 17.446 ; state.ST_SCAN    ; best_angle[1]    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.036     ; 2.505      ;
+; 17.446 ; state.ST_SCAN    ; best_angle[0]    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.036     ; 2.505      ;
+; 17.446 ; state.ST_SCAN    ; best_angle[2]    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.036     ; 2.505      ;
+; 17.446 ; state.ST_SCAN    ; best_angle[3]    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.036     ; 2.505      ;
+; 17.495 ; rx_shift[3]      ; best_angle[1]    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.037     ; 2.455      ;
+; 17.495 ; rx_shift[3]      ; best_angle[0]    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.037     ; 2.455      ;
+; 17.495 ; rx_shift[3]      ; best_angle[2]    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.037     ; 2.455      ;
+; 17.495 ; rx_shift[3]      ; best_angle[3]    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.037     ; 2.455      ;
+; 17.528 ; state.ST_SCAN    ; bit_cnt[1]       ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.041     ; 2.418      ;
+; 17.528 ; state.ST_SCAN    ; bit_cnt[2]       ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.041     ; 2.418      ;
+; 17.617 ; bit_cnt[0]       ; best_angle[1]    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.032     ; 2.338      ;
+; 17.617 ; bit_cnt[0]       ; best_angle[0]    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.032     ; 2.338      ;
+; 17.617 ; bit_cnt[0]       ; best_angle[2]    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.032     ; 2.338      ;
+; 17.617 ; bit_cnt[0]       ; best_angle[3]    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.032     ; 2.338      ;
+; 17.687 ; state.ST_SCAN    ; bit_cnt[0]       ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.041     ; 2.259      ;
+; 17.702 ; bit_cnt[1]       ; bit_cnt[1]       ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.037     ; 2.248      ;
+; 17.702 ; bit_cnt[1]       ; bit_cnt[2]       ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.037     ; 2.248      ;
+; 17.704 ; bit_cnt[2]       ; bit_cnt[1]       ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.037     ; 2.246      ;
+; 17.704 ; bit_cnt[2]       ; bit_cnt[2]       ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.037     ; 2.246      ;
+; 17.714 ; bit_cnt[2]       ; best_angle[1]    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.032     ; 2.241      ;
+; 17.714 ; bit_cnt[2]       ; best_angle[0]    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.032     ; 2.241      ;
+; 17.714 ; bit_cnt[2]       ; best_angle[2]    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.032     ; 2.241      ;
+; 17.714 ; bit_cnt[2]       ; best_angle[3]    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.032     ; 2.241      ;
+; 17.726 ; bit_cnt[1]       ; miso_shift[7]    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.032     ; 2.229      ;
+; 17.726 ; bit_cnt[1]       ; miso_shift[6]    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.032     ; 2.229      ;
+; 17.726 ; bit_cnt[1]       ; miso_shift[5]    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.032     ; 2.229      ;
+; 17.726 ; bit_cnt[1]       ; miso_shift[4]    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.032     ; 2.229      ;
+; 17.728 ; bit_cnt[2]       ; miso_shift[7]    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.032     ; 2.227      ;
+; 17.728 ; bit_cnt[2]       ; miso_shift[6]    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.032     ; 2.227      ;
+; 17.728 ; bit_cnt[2]       ; miso_shift[5]    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.032     ; 2.227      ;
+; 17.728 ; bit_cnt[2]       ; miso_shift[4]    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.032     ; 2.227      ;
+; 17.760 ; bit_cnt[1]       ; best_angle[1]    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.032     ; 2.195      ;
+; 17.760 ; bit_cnt[1]       ; best_angle[0]    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.032     ; 2.195      ;
+; 17.760 ; bit_cnt[1]       ; best_angle[2]    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.032     ; 2.195      ;
+; 17.760 ; bit_cnt[1]       ; best_angle[3]    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.032     ; 2.195      ;
+; 17.838 ; cs_n_sync[2]     ; best_strength[0] ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.045     ; 2.104      ;
+; 17.838 ; cs_n_sync[2]     ; best_strength[1] ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.045     ; 2.104      ;
+; 17.838 ; cs_n_sync[2]     ; best_strength[2] ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.045     ; 2.104      ;
+; 17.838 ; cs_n_sync[2]     ; best_strength[3] ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.045     ; 2.104      ;
+; 17.838 ; bit_cnt[0]       ; bit_cnt[1]       ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.037     ; 2.112      ;
+; 17.838 ; bit_cnt[0]       ; bit_cnt[2]       ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.037     ; 2.112      ;
+; 17.853 ; sclk_sync[1]     ; bit_cnt[1]       ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.037     ; 2.097      ;
+; 17.853 ; sclk_sync[1]     ; bit_cnt[2]       ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.037     ; 2.097      ;
+; 17.853 ; bit_cnt[1]       ; bit_cnt[0]       ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.037     ; 2.097      ;
+; 17.855 ; bit_cnt[2]       ; bit_cnt[0]       ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.037     ; 2.095      ;
+; 17.862 ; bit_cnt[0]       ; miso_shift[7]    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.032     ; 2.093      ;
+; 17.862 ; bit_cnt[0]       ; miso_shift[6]    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.032     ; 2.093      ;
+; 17.862 ; bit_cnt[0]       ; miso_shift[5]    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.032     ; 2.093      ;
+; 17.862 ; bit_cnt[0]       ; miso_shift[4]    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.032     ; 2.093      ;
+; 17.876 ; best_strength[0] ; best_angle[1]    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.048     ; 2.063      ;
+; 17.876 ; best_strength[0] ; best_angle[0]    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.048     ; 2.063      ;
+; 17.876 ; best_strength[0] ; best_angle[2]    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.048     ; 2.063      ;
+; 17.876 ; best_strength[0] ; best_angle[3]    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.048     ; 2.063      ;
+; 17.879 ; best_strength[1] ; best_angle[1]    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.048     ; 2.060      ;
+; 17.879 ; best_strength[1] ; best_angle[0]    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.048     ; 2.060      ;
+; 17.879 ; best_strength[1] ; best_angle[2]    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.048     ; 2.060      ;
+; 17.879 ; best_strength[1] ; best_angle[3]    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.048     ; 2.060      ;
+; 17.882 ; sclk_sync[2]     ; bit_cnt[1]       ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.037     ; 2.068      ;
+; 17.882 ; sclk_sync[2]     ; bit_cnt[2]       ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.037     ; 2.068      ;
+; 17.907 ; sclk_sync[1]     ; miso_shift[7]    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.032     ; 2.048      ;
+; 17.907 ; sclk_sync[1]     ; miso_shift[6]    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.032     ; 2.048      ;
+; 17.907 ; sclk_sync[1]     ; miso_shift[5]    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.032     ; 2.048      ;
+; 17.907 ; sclk_sync[1]     ; miso_shift[4]    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.032     ; 2.048      ;
+; 17.918 ; state.ST_REPLY   ; best_strength[0] ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.045     ; 2.024      ;
+; 17.918 ; state.ST_REPLY   ; best_strength[1] ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.045     ; 2.024      ;
+; 17.918 ; state.ST_REPLY   ; best_strength[2] ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.045     ; 2.024      ;
+; 17.918 ; state.ST_REPLY   ; best_strength[3] ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.045     ; 2.024      ;
+; 17.925 ; state.ST_SCAN    ; best_strength[0] ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.045     ; 2.017      ;
+; 17.925 ; state.ST_SCAN    ; best_strength[1] ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.045     ; 2.017      ;
+; 17.925 ; state.ST_SCAN    ; best_strength[2] ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.045     ; 2.017      ;
+; 17.925 ; state.ST_SCAN    ; best_strength[3] ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.045     ; 2.017      ;
+; 17.937 ; cs_n_sync[2]     ; frame_cnt[1]     ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.043     ; 2.007      ;
+; 17.937 ; cs_n_sync[2]     ; frame_cnt[0]     ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.043     ; 2.007      ;
+; 17.937 ; cs_n_sync[2]     ; frame_cnt[3]     ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.043     ; 2.007      ;
+; 17.937 ; cs_n_sync[2]     ; frame_cnt[2]     ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.043     ; 2.007      ;
+; 17.942 ; sclk_sync[1]     ; best_strength[0] ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.041     ; 2.004      ;
+; 17.942 ; sclk_sync[1]     ; best_strength[1] ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.041     ; 2.004      ;
+; 17.942 ; sclk_sync[1]     ; best_strength[2] ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.041     ; 2.004      ;
+; 17.942 ; sclk_sync[1]     ; best_strength[3] ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.041     ; 2.004      ;
+; 17.967 ; rx_shift[4]      ; best_angle[1]    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.048     ; 1.972      ;
+; 17.967 ; rx_shift[4]      ; best_angle[0]    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.048     ; 1.972      ;
+; 17.967 ; rx_shift[4]      ; best_angle[2]    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.048     ; 1.972      ;
+; 17.967 ; rx_shift[4]      ; best_angle[3]    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.048     ; 1.972      ;
+; 17.989 ; bit_cnt[0]       ; bit_cnt[0]       ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.037     ; 1.961      ;
+; 18.015 ; sclk_sync[1]     ; bit_cnt[0]       ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.037     ; 1.935      ;
+; 18.037 ; sclk_sync[2]     ; best_angle[1]    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.032     ; 1.918      ;
+; 18.037 ; sclk_sync[2]     ; best_angle[0]    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.032     ; 1.918      ;
+; 18.037 ; sclk_sync[2]     ; best_angle[2]    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.032     ; 1.918      ;
++--------+------------------+------------------+--------------+-------------+--------------+------------+------------+
+
+
++-----------------------------------------------------------------------------------------------------------------+
+; Fast 1200mV 0C Model Hold: 'CLOCK_50'                                                                           ;
++-------+----------------+------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node      ; To Node          ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+----------------+------------------+--------------+-------------+--------------+------------+------------+
+; 0.186 ; bit_cnt[0]     ; bit_cnt[0]       ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.037      ; 0.307      ;
+; 0.186 ; bit_cnt[1]     ; bit_cnt[1]       ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.037      ; 0.307      ;
+; 0.186 ; bit_cnt[2]     ; bit_cnt[2]       ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.037      ; 0.307      ;
+; 0.187 ; state.ST_REPLY ; state.ST_REPLY   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.036      ; 0.307      ;
+; 0.187 ; state.ST_READY ; state.ST_READY   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.036      ; 0.307      ;
+; 0.187 ; state.ST_SCAN  ; state.ST_SCAN    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.036      ; 0.307      ;
+; 0.187 ; frame_cnt[1]   ; frame_cnt[1]     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.036      ; 0.307      ;
+; 0.187 ; frame_cnt[3]   ; frame_cnt[3]     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.036      ; 0.307      ;
+; 0.187 ; frame_cnt[2]   ; frame_cnt[2]     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.036      ; 0.307      ;
+; 0.194 ; miso_shift[5]  ; miso_shift[6]    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.036      ; 0.314      ;
+; 0.194 ; best_angle[1]  ; miso_shift[5]    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.036      ; 0.314      ;
+; 0.194 ; mosi_sync[0]   ; mosi_sync[1]     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.036      ; 0.314      ;
+; 0.194 ; frame_cnt[0]   ; frame_cnt[0]     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.036      ; 0.314      ;
+; 0.194 ; cs_n_sync[0]   ; cs_n_sync[1]     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.036      ; 0.314      ;
+; 0.196 ; rx_shift[6]    ; best_strength[3] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.037      ; 0.317      ;
+; 0.196 ; rst_n_sync[1]  ; rst_n_sync[2]    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.036      ; 0.316      ;
+; 0.197 ; rst_n_sync[0]  ; rst_n_sync[1]    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.036      ; 0.317      ;
+; 0.199 ; rx_shift[4]    ; best_strength[1] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.037      ; 0.320      ;
+; 0.199 ; frame_cnt[2]   ; frame_cnt[3]     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.036      ; 0.319      ;
+; 0.200 ; rx_shift[5]    ; rx_shift[6]      ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.037      ; 0.321      ;
+; 0.201 ; rx_shift[5]    ; best_strength[2] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.037      ; 0.322      ;
+; 0.202 ; rx_shift[4]    ; rx_shift[5]      ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.037      ; 0.323      ;
+; 0.205 ; frame_cnt[0]   ; frame_cnt[1]     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.036      ; 0.325      ;
+; 0.210 ; bit_cnt[0]     ; bit_cnt[1]       ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.037      ; 0.331      ;
+; 0.236 ; cs_n_sync[2]   ; state.ST_READY   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.036      ; 0.356      ;
+; 0.270 ; rx_shift[2]    ; rx_shift[3]      ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.037      ; 0.391      ;
+; 0.291 ; state.ST_REPLY ; fpga_ready_reg   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.036      ; 0.411      ;
+; 0.295 ; best_angle[3]  ; miso_shift[7]    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.036      ; 0.415      ;
+; 0.295 ; best_angle[0]  ; miso_shift[4]    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.036      ; 0.415      ;
+; 0.299 ; state.ST_REPLY ; rx_shift[1]      ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.036      ; 0.419      ;
+; 0.300 ; state.ST_REPLY ; rx_shift[2]      ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.036      ; 0.420      ;
+; 0.300 ; state.ST_REPLY ; rx_shift[0]      ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.036      ; 0.420      ;
+; 0.301 ; best_angle[2]  ; miso_shift[6]    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.036      ; 0.421      ;
+; 0.303 ; miso_shift[4]  ; miso_shift[5]    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.036      ; 0.423      ;
+; 0.312 ; rx_shift[1]    ; rx_shift[2]      ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.036      ; 0.432      ;
+; 0.312 ; rx_shift[0]    ; rx_shift[1]      ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.036      ; 0.432      ;
+; 0.333 ; state.ST_READY ; state.ST_REPLY   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.036      ; 0.453      ;
+; 0.335 ; cs_n_sync[1]   ; cs_n_sync[2]     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.036      ; 0.455      ;
+; 0.338 ; state.ST_READY ; fpga_ready_reg   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.036      ; 0.458      ;
+; 0.358 ; sclk_sync[0]   ; sclk_sync[1]     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.037      ; 0.479      ;
+; 0.359 ; state.ST_REPLY ; state.ST_READY   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.036      ; 0.479      ;
+; 0.359 ; cs_n_sync[2]   ; rx_shift[1]      ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.036      ; 0.479      ;
+; 0.359 ; cs_n_sync[2]   ; rx_shift[3]      ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.037      ; 0.480      ;
+; 0.360 ; cs_n_sync[2]   ; state.ST_REPLY   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.036      ; 0.480      ;
+; 0.360 ; cs_n_sync[2]   ; rx_shift[2]      ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.036      ; 0.480      ;
+; 0.360 ; cs_n_sync[2]   ; rx_shift[0]      ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.036      ; 0.480      ;
+; 0.365 ; frame_cnt[1]   ; frame_cnt[2]     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.036      ; 0.485      ;
+; 0.368 ; sclk_sync[1]   ; sclk_sync[2]     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.037      ; 0.489      ;
+; 0.373 ; mosi_sync[2]   ; rx_shift[0]      ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.036      ; 0.493      ;
+; 0.379 ; miso_shift[6]  ; miso_shift[7]    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.036      ; 0.499      ;
+; 0.397 ; rx_shift[2]    ; best_angle[3]    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.036      ; 0.517      ;
+; 0.407 ; state.ST_REPLY ; rx_shift[3]      ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.037      ; 0.528      ;
+; 0.424 ; frame_cnt[3]   ; frame_cnt[2]     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.036      ; 0.544      ;
+; 0.435 ; bit_cnt[1]     ; bit_cnt[2]       ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.037      ; 0.556      ;
+; 0.458 ; rx_shift[1]    ; best_angle[2]    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.036      ; 0.578      ;
+; 0.463 ; frame_cnt[1]   ; frame_cnt[3]     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.036      ; 0.583      ;
+; 0.476 ; frame_cnt[0]   ; frame_cnt[2]     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.036      ; 0.596      ;
+; 0.478 ; cs_n_sync[2]   ; miso_shift[6]    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.036      ; 0.598      ;
+; 0.482 ; mosi_sync[1]   ; mosi_sync[2]     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.038      ; 0.604      ;
+; 0.490 ; cs_n_sync[2]   ; fpga_ready_reg   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.036      ; 0.610      ;
+; 0.493 ; mosi_sync[2]   ; best_angle[0]    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.036      ; 0.613      ;
+; 0.502 ; cs_n_sync[2]   ; state.ST_SCAN    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.036      ; 0.622      ;
+; 0.507 ; state.ST_REPLY ; best_angle[0]    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.036      ; 0.627      ;
+; 0.509 ; state.ST_REPLY ; miso_shift[4]    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.036      ; 0.629      ;
+; 0.511 ; state.ST_REPLY ; best_angle[1]    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.036      ; 0.631      ;
+; 0.513 ; rx_shift[0]    ; best_angle[1]    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.036      ; 0.633      ;
+; 0.514 ; state.ST_REPLY ; miso_shift[7]    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.036      ; 0.634      ;
+; 0.515 ; state.ST_REPLY ; miso_shift[5]    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.036      ; 0.635      ;
+; 0.516 ; state.ST_REPLY ; best_angle[3]    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.036      ; 0.636      ;
+; 0.522 ; state.ST_SCAN  ; state.ST_REPLY   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.036      ; 0.642      ;
+; 0.525 ; state.ST_REPLY ; state.ST_SCAN    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.036      ; 0.645      ;
+; 0.530 ; cs_n_sync[2]   ; miso_shift[7]    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.036      ; 0.650      ;
+; 0.534 ; bit_cnt[0]     ; bit_cnt[2]       ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.037      ; 0.655      ;
+; 0.538 ; cs_n_sync[2]   ; miso_shift[5]    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.036      ; 0.658      ;
+; 0.559 ; fpga_ready_reg ; fpga_ready_reg   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.036      ; 0.679      ;
+; 0.567 ; frame_cnt[0]   ; frame_cnt[3]     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.036      ; 0.687      ;
+; 0.573 ; state.ST_REPLY ; miso_shift[6]    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.036      ; 0.693      ;
+; 0.577 ; state.ST_REPLY ; best_angle[2]    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.036      ; 0.697      ;
+; 0.582 ; cs_n_sync[2]   ; rx_shift[4]      ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.048      ; 0.714      ;
+; 0.590 ; state.ST_REPLY ; frame_cnt[1]     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.029      ; 0.703      ;
+; 0.595 ; state.ST_REPLY ; frame_cnt[3]     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.029      ; 0.708      ;
+; 0.595 ; state.ST_REPLY ; frame_cnt[0]     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.029      ; 0.708      ;
+; 0.597 ; rx_shift[3]    ; rx_shift[4]      ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.048      ; 0.729      ;
+; 0.608 ; state.ST_READY ; state.ST_SCAN    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.036      ; 0.728      ;
+; 0.612 ; state.ST_REPLY ; frame_cnt[2]     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.029      ; 0.725      ;
+; 0.621 ; frame_cnt[3]   ; frame_cnt[1]     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.036      ; 0.741      ;
+; 0.639 ; state.ST_SCAN  ; state.ST_READY   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.036      ; 0.759      ;
+; 0.642 ; rx_shift[3]    ; best_strength[0] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.048      ; 0.774      ;
+; 0.644 ; state.ST_REPLY ; best_strength[3] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.048      ; 0.776      ;
+; 0.646 ; state.ST_REPLY ; rx_shift[5]      ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.048      ; 0.778      ;
+; 0.647 ; state.ST_REPLY ; best_strength[2] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.048      ; 0.779      ;
+; 0.647 ; state.ST_REPLY ; rx_shift[6]      ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.048      ; 0.779      ;
+; 0.652 ; state.ST_REPLY ; best_strength[0] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.048      ; 0.784      ;
+; 0.652 ; sclk_sync[1]   ; fpga_ready_reg   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.041      ; 0.777      ;
+; 0.653 ; state.ST_REPLY ; best_strength[1] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.048      ; 0.785      ;
+; 0.664 ; frame_cnt[2]   ; frame_cnt[1]     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.036      ; 0.784      ;
+; 0.697 ; state.ST_READY ; bit_cnt[0]       ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.032      ; 0.813      ;
+; 0.711 ; cs_n_sync[2]   ; rx_shift[6]      ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.048      ; 0.843      ;
+; 0.712 ; cs_n_sync[2]   ; rx_shift[5]      ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.048      ; 0.844      ;
+; 0.713 ; sclk_sync[2]   ; fpga_ready_reg   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.041      ; 0.838      ;
++-------+----------------+------------------+--------------+-------------+--------------+------------+------------+
+
+
++-----------------------------------------------------------------------------------------------------------------+
+; Fast 1200mV 0C Model Recovery: 'CLOCK_50'                                                                       ;
++--------+---------------+------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node     ; To Node          ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+---------------+------------------+--------------+-------------+--------------+------------+------------+
+; 18.789 ; rst_n_sync[2] ; miso_shift[7]    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.029     ; 1.169      ;
+; 18.789 ; rst_n_sync[2] ; miso_shift[6]    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.029     ; 1.169      ;
+; 18.789 ; rst_n_sync[2] ; miso_shift[5]    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.029     ; 1.169      ;
+; 18.789 ; rst_n_sync[2] ; miso_shift[4]    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.029     ; 1.169      ;
+; 18.789 ; rst_n_sync[2] ; best_angle[1]    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.029     ; 1.169      ;
+; 18.789 ; rst_n_sync[2] ; best_angle[0]    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.029     ; 1.169      ;
+; 18.789 ; rst_n_sync[2] ; best_angle[2]    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.029     ; 1.169      ;
+; 18.789 ; rst_n_sync[2] ; best_angle[3]    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.029     ; 1.169      ;
+; 18.796 ; rst_n_sync[2] ; best_strength[0] ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.038     ; 1.153      ;
+; 18.796 ; rst_n_sync[2] ; best_strength[1] ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.038     ; 1.153      ;
+; 18.796 ; rst_n_sync[2] ; best_strength[2] ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.038     ; 1.153      ;
+; 18.796 ; rst_n_sync[2] ; best_strength[3] ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.038     ; 1.153      ;
+; 18.796 ; rst_n_sync[2] ; rx_shift[4]      ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.038     ; 1.153      ;
+; 18.796 ; rst_n_sync[2] ; rx_shift[5]      ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.038     ; 1.153      ;
+; 18.796 ; rst_n_sync[2] ; rx_shift[6]      ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.038     ; 1.153      ;
+; 18.943 ; rst_n_sync[2] ; fpga_ready_reg   ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.029     ; 1.015      ;
+; 18.943 ; rst_n_sync[2] ; rx_shift[2]      ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.029     ; 1.015      ;
+; 18.943 ; rst_n_sync[2] ; rx_shift[1]      ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.029     ; 1.015      ;
+; 18.943 ; rst_n_sync[2] ; rx_shift[0]      ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.029     ; 1.015      ;
+; 18.943 ; rst_n_sync[2] ; state.ST_REPLY   ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.029     ; 1.015      ;
+; 18.943 ; rst_n_sync[2] ; state.ST_READY   ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.029     ; 1.015      ;
+; 18.943 ; rst_n_sync[2] ; state.ST_SCAN    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.029     ; 1.015      ;
+; 18.964 ; rst_n_sync[2] ; rx_shift[3]      ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.029     ; 0.994      ;
+; 18.964 ; rst_n_sync[2] ; bit_cnt[0]       ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.034     ; 0.989      ;
+; 18.964 ; rst_n_sync[2] ; bit_cnt[1]       ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.034     ; 0.989      ;
+; 18.964 ; rst_n_sync[2] ; bit_cnt[2]       ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.034     ; 0.989      ;
+; 19.227 ; rst_n_sync[2] ; frame_cnt[1]     ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.036     ; 0.724      ;
+; 19.227 ; rst_n_sync[2] ; frame_cnt[0]     ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.036     ; 0.724      ;
+; 19.227 ; rst_n_sync[2] ; frame_cnt[3]     ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.036     ; 0.724      ;
+; 19.227 ; rst_n_sync[2] ; frame_cnt[2]     ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.036     ; 0.724      ;
++--------+---------------+------------------+--------------+-------------+--------------+------------+------------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Fast 1200mV 0C Model Removal: 'CLOCK_50'                                                                       ;
++-------+---------------+------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node     ; To Node          ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+---------------+------------------+--------------+-------------+--------------+------------+------------+
+; 0.501 ; rst_n_sync[2] ; frame_cnt[1]     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.036      ; 0.621      ;
+; 0.501 ; rst_n_sync[2] ; frame_cnt[0]     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.036      ; 0.621      ;
+; 0.501 ; rst_n_sync[2] ; frame_cnt[3]     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.036      ; 0.621      ;
+; 0.501 ; rst_n_sync[2] ; frame_cnt[2]     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.036      ; 0.621      ;
+; 0.719 ; rst_n_sync[2] ; bit_cnt[0]       ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.039      ; 0.842      ;
+; 0.719 ; rst_n_sync[2] ; bit_cnt[1]       ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.039      ; 0.842      ;
+; 0.719 ; rst_n_sync[2] ; bit_cnt[2]       ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.039      ; 0.842      ;
+; 0.725 ; rst_n_sync[2] ; rx_shift[3]      ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.044      ; 0.853      ;
+; 0.735 ; rst_n_sync[2] ; fpga_ready_reg   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.043      ; 0.862      ;
+; 0.735 ; rst_n_sync[2] ; rx_shift[2]      ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.043      ; 0.862      ;
+; 0.735 ; rst_n_sync[2] ; rx_shift[1]      ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.043      ; 0.862      ;
+; 0.735 ; rst_n_sync[2] ; rx_shift[0]      ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.043      ; 0.862      ;
+; 0.735 ; rst_n_sync[2] ; state.ST_REPLY   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.043      ; 0.862      ;
+; 0.735 ; rst_n_sync[2] ; state.ST_READY   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.043      ; 0.862      ;
+; 0.735 ; rst_n_sync[2] ; state.ST_SCAN    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.043      ; 0.862      ;
+; 0.848 ; rst_n_sync[2] ; best_strength[0] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.055      ; 0.987      ;
+; 0.848 ; rst_n_sync[2] ; best_strength[1] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.055      ; 0.987      ;
+; 0.848 ; rst_n_sync[2] ; best_strength[2] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.055      ; 0.987      ;
+; 0.848 ; rst_n_sync[2] ; best_strength[3] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.055      ; 0.987      ;
+; 0.848 ; rst_n_sync[2] ; rx_shift[4]      ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.055      ; 0.987      ;
+; 0.848 ; rst_n_sync[2] ; rx_shift[5]      ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.055      ; 0.987      ;
+; 0.848 ; rst_n_sync[2] ; rx_shift[6]      ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.055      ; 0.987      ;
+; 0.867 ; rst_n_sync[2] ; miso_shift[7]    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.043      ; 0.994      ;
+; 0.867 ; rst_n_sync[2] ; miso_shift[6]    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.043      ; 0.994      ;
+; 0.867 ; rst_n_sync[2] ; miso_shift[5]    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.043      ; 0.994      ;
+; 0.867 ; rst_n_sync[2] ; miso_shift[4]    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.043      ; 0.994      ;
+; 0.867 ; rst_n_sync[2] ; best_angle[1]    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.043      ; 0.994      ;
+; 0.867 ; rst_n_sync[2] ; best_angle[0]    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.043      ; 0.994      ;
+; 0.867 ; rst_n_sync[2] ; best_angle[2]    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.043      ; 0.994      ;
+; 0.867 ; rst_n_sync[2] ; best_angle[3]    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.043      ; 0.994      ;
++-------+---------------+------------------+--------------+-------------+--------------+------------+------------+
+
+
+----------------------------------------------
+; Fast 1200mV 0C Model Metastability Summary ;
+----------------------------------------------
+The design MTBF is not calculated because there are no specified synchronizers in the design.
+Number of Synchronizer Chains Found: 4
+Shortest Synchronizer Chain: 2 Registers
+Fraction of Chains for which MTBFs Could Not be Calculated: 1.000
+Worst Case Available Settling Time: 36.815 ns
+
+
+
+
++------------------------------------------------------------------------------+
+; Multicorner Timing Analysis Summary                                          ;
++------------------+--------+-------+----------+---------+---------------------+
+; Clock            ; Setup  ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
++------------------+--------+-------+----------+---------+---------------------+
+; Worst-case Slack ; 15.305 ; 0.186 ; 17.938   ; 0.501   ; 9.273               ;
+;  CLOCK_50        ; 15.305 ; 0.186 ; 17.938   ; 0.501   ; 9.273               ;
+; Design-wide TNS  ; 0.0    ; 0.0   ; 0.0      ; 0.0     ; 0.0                 ;
+;  CLOCK_50        ; 0.000  ; 0.000 ; 0.000    ; 0.000   ; 0.000               ;
++------------------+--------+-------+----------+---------+---------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Board Trace Model Assignments                                                                                                                                                                                                                                                                                                                                                                                    ;
++---------------+--------------+-------------------+-------------------------+-------------------------+---------------+---------------------+----------------+------------------+--------+------------------+------------------------+------------------------+--------------+---------------+-----------------+-------+---------------------+--------------------+---------------+-----------------+-------------+
+; Pin           ; I/O Standard ; Near Tline Length ; Near Tline L per Length ; Near Tline C per Length ; Near Series R ; Near Differential R ; Near Pull-up R ; Near Pull-down R ; Near C ; Far Tline Length ; Far Tline L per Length ; Far Tline C per Length ; Far Series R ; Far Pull-up R ; Far Pull-down R ; Far C ; Termination Voltage ; Far Differential R ; EBD File Name ; EBD Signal Name ; EBD Far-end ;
++---------------+--------------+-------------------+-------------------------+-------------------------+---------------+---------------------+----------------+------------------+--------+------------------+------------------------+------------------------+--------------+---------------+-----------------+-------+---------------------+--------------------+---------------+-----------------+-------------+
+; SPI_MISO      ; 3.3-V LVTTL  ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; FPGA_READY    ; 3.3-V LVTTL  ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; ~ALTERA_DCLK~ ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; ~ALTERA_nCEO~ ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
++---------------+--------------+-------------------+-------------------------+-------------------------+---------------+---------------------+----------------+------------------+--------+------------------+------------------------+------------------------+--------------+---------------+-----------------+-------+---------------------+--------------------+---------------+-----------------+-------------+
+
+
++----------------------------------------------------------------------------+
+; Input Transition Times                                                     ;
++-------------------------+--------------+-----------------+-----------------+
+; Pin                     ; I/O Standard ; 10-90 Rise Time ; 90-10 Fall Time ;
++-------------------------+--------------+-----------------+-----------------+
+; CLOCK_50                ; 3.3-V LVTTL  ; 2640 ps         ; 2640 ps         ;
+; SPI_SCLK                ; 3.3-V LVTTL  ; 2640 ps         ; 2640 ps         ;
+; SPI_CS_N                ; 3.3-V LVTTL  ; 2640 ps         ; 2640 ps         ;
+; RESET_N                 ; 3.3-V LVTTL  ; 2640 ps         ; 2640 ps         ;
+; SPI_MOSI                ; 3.3-V LVTTL  ; 2640 ps         ; 2640 ps         ;
+; ~ALTERA_ASDO_DATA1~     ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; ~ALTERA_FLASH_nCE_nCSO~ ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; ~ALTERA_DATA0~          ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
++-------------------------+--------------+-----------------+-----------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Signal Integrity Metrics (Slow 1200mv 0c Model)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; Pin           ; I/O Standard ; Board Delay on Rise ; Board Delay on Fall ; Steady State Voh at FPGA Pin ; Steady State Vol at FPGA Pin ; Voh Max at FPGA Pin ; Vol Min at FPGA Pin ; Ringback Voltage on Rise at FPGA Pin ; Ringback Voltage on Fall at FPGA Pin ; 10-90 Rise Time at FPGA Pin ; 90-10 Fall Time at FPGA Pin ; Monotonic Rise at FPGA Pin ; Monotonic Fall at FPGA Pin ; Steady State Voh at Far-end ; Steady State Vol at Far-end ; Voh Max at Far-end ; Vol Min at Far-end ; Ringback Voltage on Rise at Far-end ; Ringback Voltage on Fall at Far-end ; 10-90 Rise Time at Far-end ; 90-10 Fall Time at Far-end ; Monotonic Rise at Far-end ; Monotonic Fall at Far-end ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; SPI_MISO      ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 2.24e-08 V                   ; 3.14 V              ; -0.115 V            ; 0.31 V                               ; 0.241 V                              ; 5.06e-10 s                  ; 4.37e-10 s                  ; No                         ; No                         ; 3.08 V                      ; 2.24e-08 V                  ; 3.14 V             ; -0.115 V           ; 0.31 V                              ; 0.241 V                             ; 5.06e-10 s                 ; 4.37e-10 s                 ; No                        ; No                        ;
+; FPGA_READY    ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 2.24e-08 V                   ; 3.14 V              ; -0.115 V            ; 0.31 V                               ; 0.241 V                              ; 5.06e-10 s                  ; 4.37e-10 s                  ; No                         ; No                         ; 3.08 V                      ; 2.24e-08 V                  ; 3.14 V             ; -0.115 V           ; 0.31 V                              ; 0.241 V                             ; 5.06e-10 s                 ; 4.37e-10 s                 ; No                        ; No                        ;
+; ~ALTERA_DCLK~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.45e-09 V                   ; 2.38 V              ; -0.0609 V           ; 0.148 V                              ; 0.095 V                              ; 2.82e-10 s                  ; 2.59e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 3.45e-09 V                  ; 2.38 V             ; -0.0609 V          ; 0.148 V                             ; 0.095 V                             ; 2.82e-10 s                 ; 2.59e-10 s                 ; Yes                       ; Yes                       ;
+; ~ALTERA_nCEO~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 5.61e-09 V                   ; 2.38 V              ; -0.00274 V          ; 0.141 V                              ; 0.006 V                              ; 4.7e-10 s                   ; 6.02e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 5.61e-09 V                  ; 2.38 V             ; -0.00274 V         ; 0.141 V                             ; 0.006 V                             ; 4.7e-10 s                  ; 6.02e-10 s                 ; Yes                       ; Yes                       ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Signal Integrity Metrics (Slow 1200mv 85c Model)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; Pin           ; I/O Standard ; Board Delay on Rise ; Board Delay on Fall ; Steady State Voh at FPGA Pin ; Steady State Vol at FPGA Pin ; Voh Max at FPGA Pin ; Vol Min at FPGA Pin ; Ringback Voltage on Rise at FPGA Pin ; Ringback Voltage on Fall at FPGA Pin ; 10-90 Rise Time at FPGA Pin ; 90-10 Fall Time at FPGA Pin ; Monotonic Rise at FPGA Pin ; Monotonic Fall at FPGA Pin ; Steady State Voh at Far-end ; Steady State Vol at Far-end ; Voh Max at Far-end ; Vol Min at Far-end ; Ringback Voltage on Rise at Far-end ; Ringback Voltage on Fall at Far-end ; 10-90 Rise Time at Far-end ; 90-10 Fall Time at Far-end ; Monotonic Rise at Far-end ; Monotonic Fall at Far-end ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; SPI_MISO      ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 2.99e-06 V                   ; 3.11 V              ; -0.0717 V           ; 0.209 V                              ; 0.168 V                              ; 6.66e-10 s                  ; 6.19e-10 s                  ; Yes                        ; No                         ; 3.08 V                      ; 2.99e-06 V                  ; 3.11 V             ; -0.0717 V          ; 0.209 V                             ; 0.168 V                             ; 6.66e-10 s                 ; 6.19e-10 s                 ; Yes                       ; No                        ;
+; FPGA_READY    ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 2.99e-06 V                   ; 3.11 V              ; -0.0717 V           ; 0.209 V                              ; 0.168 V                              ; 6.66e-10 s                  ; 6.19e-10 s                  ; Yes                        ; No                         ; 3.08 V                      ; 2.99e-06 V                  ; 3.11 V             ; -0.0717 V          ; 0.209 V                             ; 0.168 V                             ; 6.66e-10 s                 ; 6.19e-10 s                 ; Yes                       ; No                        ;
+; ~ALTERA_DCLK~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 5.74e-07 V                   ; 2.36 V              ; -0.0201 V           ; 0.072 V                              ; 0.033 V                              ; 4.04e-10 s                  ; 3.29e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 5.74e-07 V                  ; 2.36 V             ; -0.0201 V          ; 0.072 V                             ; 0.033 V                             ; 4.04e-10 s                 ; 3.29e-10 s                 ; Yes                       ; Yes                       ;
+; ~ALTERA_nCEO~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 9.45e-07 V                   ; 2.35 V              ; -0.00643 V          ; 0.081 V                              ; 0.031 V                              ; 5.31e-10 s                  ; 7.59e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 9.45e-07 V                  ; 2.35 V             ; -0.00643 V         ; 0.081 V                             ; 0.031 V                             ; 5.31e-10 s                 ; 7.59e-10 s                 ; Yes                       ; Yes                       ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Signal Integrity Metrics (Fast 1200mv 0c Model)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; Pin           ; I/O Standard ; Board Delay on Rise ; Board Delay on Fall ; Steady State Voh at FPGA Pin ; Steady State Vol at FPGA Pin ; Voh Max at FPGA Pin ; Vol Min at FPGA Pin ; Ringback Voltage on Rise at FPGA Pin ; Ringback Voltage on Fall at FPGA Pin ; 10-90 Rise Time at FPGA Pin ; 90-10 Fall Time at FPGA Pin ; Monotonic Rise at FPGA Pin ; Monotonic Fall at FPGA Pin ; Steady State Voh at Far-end ; Steady State Vol at Far-end ; Voh Max at Far-end ; Vol Min at Far-end ; Ringback Voltage on Rise at Far-end ; Ringback Voltage on Fall at Far-end ; 10-90 Rise Time at Far-end ; 90-10 Fall Time at Far-end ; Monotonic Rise at Far-end ; Monotonic Fall at Far-end ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; SPI_MISO      ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.46 V                       ; 1.85e-07 V                   ; 3.57 V              ; -0.141 V            ; 0.301 V                              ; 0.239 V                              ; 4.61e-10 s                  ; 4.2e-10 s                   ; No                         ; No                         ; 3.46 V                      ; 1.85e-07 V                  ; 3.57 V             ; -0.141 V           ; 0.301 V                             ; 0.239 V                             ; 4.61e-10 s                 ; 4.2e-10 s                  ; No                        ; No                        ;
+; FPGA_READY    ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.46 V                       ; 1.85e-07 V                   ; 3.57 V              ; -0.141 V            ; 0.301 V                              ; 0.239 V                              ; 4.61e-10 s                  ; 4.2e-10 s                   ; No                         ; No                         ; 3.46 V                      ; 1.85e-07 V                  ; 3.57 V             ; -0.141 V           ; 0.301 V                             ; 0.239 V                             ; 4.61e-10 s                 ; 4.2e-10 s                  ; No                        ; No                        ;
+; ~ALTERA_DCLK~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 2.22e-08 V                   ; 2.74 V              ; -0.06 V             ; 0.158 V                              ; 0.08 V                               ; 2.68e-10 s                  ; 2.19e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 2.22e-08 V                  ; 2.74 V             ; -0.06 V            ; 0.158 V                             ; 0.08 V                              ; 2.68e-10 s                 ; 2.19e-10 s                 ; Yes                       ; Yes                       ;
+; ~ALTERA_nCEO~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 3.54e-08 V                   ; 2.7 V               ; -0.00943 V          ; 0.276 V                              ; 0.035 V                              ; 3.19e-10 s                  ; 4.99e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 3.54e-08 V                  ; 2.7 V              ; -0.00943 V         ; 0.276 V                             ; 0.035 V                             ; 3.19e-10 s                 ; 4.99e-10 s                 ; No                        ; Yes                       ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+
+
++-------------------------------------------------------------------+
+; Setup Transfers                                                   ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; CLOCK_50   ; CLOCK_50 ; 521      ; 0        ; 0        ; 0        ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++-------------------------------------------------------------------+
+; Hold Transfers                                                    ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; CLOCK_50   ; CLOCK_50 ; 521      ; 0        ; 0        ; 0        ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++-------------------------------------------------------------------+
+; Recovery Transfers                                                ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; CLOCK_50   ; CLOCK_50 ; 30       ; 0        ; 0        ; 0        ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++-------------------------------------------------------------------+
+; Removal Transfers                                                 ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; CLOCK_50   ; CLOCK_50 ; 30       ; 0        ; 0        ; 0        ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
+---------------
+; Report TCCS ;
+---------------
+No dedicated SERDES Transmitter circuitry present in device or used in design
+
+
+---------------
+; Report RSKM ;
+---------------
+No non-DPA dedicated SERDES Receiver circuitry present in device or used in design
+
+
++------------------------------------------------+
+; Unconstrained Paths Summary                    ;
++---------------------------------+-------+------+
+; Property                        ; Setup ; Hold ;
++---------------------------------+-------+------+
+; Illegal Clocks                  ; 0     ; 0    ;
+; Unconstrained Clocks            ; 0     ; 0    ;
+; Unconstrained Input Ports       ; 0     ; 0    ;
+; Unconstrained Input Port Paths  ; 0     ; 0    ;
+; Unconstrained Output Ports      ; 0     ; 0    ;
+; Unconstrained Output Port Paths ; 0     ; 0    ;
++---------------------------------+-------+------+
+
+
++------------------------------------------+
+; Clock Status Summary                     ;
++----------+----------+------+-------------+
+; Target   ; Clock    ; Type ; Status      ;
++----------+----------+------+-------------+
+; CLOCK_50 ; CLOCK_50 ; Base ; Constrained ;
++----------+----------+------+-------------+
+
+
++--------------------------+
+; Timing Analyzer Messages ;
++--------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Timing Analyzer
+    Info: Version 25.1std.0 Build 1129 10/21/2025 SC Lite Edition
+    Info: Processing started: Wed Apr 29 01:38:46 2026
+Info: Command: quartus_sta fpga_antenna_spi -c fpga_antenna_spi
+Info: qsta_default_script.tcl version: #1
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 8 of the 8 processors detected
+Info (21077): Low junction temperature is 0 degrees C
+Info (21077): High junction temperature is 85 degrees C
+Info (332104): Reading SDC File: 'fpga_antenna_spi.sdc'
+Info (332151): Clock uncertainty is not calculated until you update the timing netlist.
+Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
+Info: Found TIMING_ANALYZER_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
+Info: Analyzing Slow 1200mV 85C Model
+Info (332146): Worst-case setup slack is 15.305
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    15.305               0.000 CLOCK_50 
+Info (332146): Worst-case hold slack is 0.358
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     0.358               0.000 CLOCK_50 
+Info (332146): Worst-case recovery slack is 17.938
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    17.938               0.000 CLOCK_50 
+Info (332146): Worst-case removal slack is 0.918
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     0.918               0.000 CLOCK_50 
+Info (332146): Worst-case minimum pulse width slack is 9.596
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     9.596               0.000 CLOCK_50 
+Info (332114): Report Metastability: Found 4 synchronizer chains.
+    Info (332114): The design MTBF is not calculated because there are no specified synchronizers in the design.
+    Info (332114): Number of Synchronizer Chains Found: 4
+    Info (332114): Shortest Synchronizer Chain: 2 Registers
+    Info (332114): Fraction of Chains for which MTBFs Could Not be Calculated: 1.000
+    Info (332114): Worst Case Available Settling Time: 34.389 ns
+    Info (332114): 
+Info: Analyzing Slow 1200mV 0C Model
+Info (334003): Started post-fitting delay annotation
+Info (334004): Delay annotation completed successfully
+Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
+Info (332146): Worst-case setup slack is 15.765
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    15.765               0.000 CLOCK_50 
+Info (332146): Worst-case hold slack is 0.312
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     0.312               0.000 CLOCK_50 
+Info (332146): Worst-case recovery slack is 18.179
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    18.179               0.000 CLOCK_50 
+Info (332146): Worst-case removal slack is 0.828
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     0.828               0.000 CLOCK_50 
+Info (332146): Worst-case minimum pulse width slack is 9.596
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     9.596               0.000 CLOCK_50 
+Info (332114): Report Metastability: Found 4 synchronizer chains.
+    Info (332114): The design MTBF is not calculated because there are no specified synchronizers in the design.
+    Info (332114): Number of Synchronizer Chains Found: 4
+    Info (332114): Shortest Synchronizer Chain: 2 Registers
+    Info (332114): Fraction of Chains for which MTBFs Could Not be Calculated: 1.000
+    Info (332114): Worst Case Available Settling Time: 34.924 ns
+    Info (332114): 
+Info: Analyzing Fast 1200mV 0C Model
+Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
+Info (332146): Worst-case setup slack is 17.289
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    17.289               0.000 CLOCK_50 
+Info (332146): Worst-case hold slack is 0.186
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     0.186               0.000 CLOCK_50 
+Info (332146): Worst-case recovery slack is 18.789
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    18.789               0.000 CLOCK_50 
+Info (332146): Worst-case removal slack is 0.501
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     0.501               0.000 CLOCK_50 
+Info (332146): Worst-case minimum pulse width slack is 9.273
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     9.273               0.000 CLOCK_50 
+Info (332114): Report Metastability: Found 4 synchronizer chains.
+    Info (332114): The design MTBF is not calculated because there are no specified synchronizers in the design.
+    Info (332114): Number of Synchronizer Chains Found: 4
+    Info (332114): Shortest Synchronizer Chain: 2 Registers
+    Info (332114): Fraction of Chains for which MTBFs Could Not be Calculated: 1.000
+    Info (332114): Worst Case Available Settling Time: 36.815 ns
+    Info (332114): 
+Info (332101): Design is fully constrained for setup requirements
+Info (332101): Design is fully constrained for hold requirements
+Info: Quartus Prime Timing Analyzer was successful. 0 errors, 1 warning
+    Info: Peak virtual memory: 523 megabytes
+    Info: Processing ended: Wed Apr 29 01:38:48 2026
+    Info: Elapsed time: 00:00:02
+    Info: Total CPU time (on all processors): 00:00:02
+
+
